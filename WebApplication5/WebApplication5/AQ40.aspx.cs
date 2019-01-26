@@ -108,20 +108,24 @@ namespace WebApplication5
                 reader.Close();
             }
 
-            if (spec.Equals("Mainspec"))
+            if (!spec.Equals("Offspec"))
             {
-                /* Update Mainspec Player LootScore */
-                string updatePlayerLootScore = "UPDATE Roster SET LootScore = LootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
-                SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
-                commandUpdatePlayerLootScore.ExecuteNonQuery();
+                if (spec.Equals("Mainspec"))
+                {
+                    /* Update Mainspec Player LootScore */
+                    string updatePlayerLootScore = "UPDATE Roster SET LootScore = LootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
+                    SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
+                    commandUpdatePlayerLootScore.ExecuteNonQuery();
+                }
+                else
+                {
+                    /* Update Pvp/Offspec Player LootScore */
+                    string updatePlayerLootScore = "UPDATE Roster SET PvpLootScore = PvpLootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
+                    SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
+                    commandUpdatePlayerLootScore.ExecuteNonQuery();
+                }
             }
-            else
-            {
-                /* Update Pvp/Offspec Player LootScore */
-                string updatePlayerLootScore = "UPDATE Roster SET PvpLootScore = PvpLootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
-                SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
-                commandUpdatePlayerLootScore.ExecuteNonQuery();
-            }
+
 
             /* Get RaidName */
             string itemRaidName = "SELECT distinct RaidName from LOOT where ItemName = '" + itemName + "'";
