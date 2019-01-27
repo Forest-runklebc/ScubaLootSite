@@ -1615,15 +1615,6 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioKelThuzad5;
         
         /// <summary>
-        /// comboTrashPlayer1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboTrashPlayer1;
-        
-        /// <summary>
         /// comboTrashLoot1 control.
         /// </summary>
         /// <remarks>
@@ -1631,6 +1622,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::AjaxControlToolkit.ComboBox comboTrashLoot1;
+        
+        /// <summary>
+        /// comboTrashPlayer1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ComboBox comboTrashPlayer1;
         
         /// <summary>
         /// radioTrash1 control.

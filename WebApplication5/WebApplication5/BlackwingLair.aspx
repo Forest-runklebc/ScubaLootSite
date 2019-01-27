@@ -46,7 +46,7 @@
             <ajaxToolkit:ComboBox ID="comboRazorgorePlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioRazorgore1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -56,7 +56,7 @@
             <ajaxToolkit:ComboBox ID="comboRazorgorePlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioRazorgore2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -66,7 +66,7 @@
             <ajaxToolkit:ComboBox ID="comboRazorgorePlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioRazorgore3" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -79,7 +79,7 @@
             <ajaxToolkit:ComboBox ID="comboVaelPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioVael1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -89,7 +89,7 @@
             <ajaxToolkit:ComboBox ID="comboVaelPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioVael2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -99,7 +99,7 @@
             <ajaxToolkit:ComboBox ID="comboVaelPlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioVael3" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -112,7 +112,7 @@
             <ajaxToolkit:ComboBox ID="comboBroodlordPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioBroodlord1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -122,7 +122,7 @@
             <ajaxToolkit:ComboBox ID="comboBroodlordPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioBroodlord2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -132,7 +132,7 @@
             <ajaxToolkit:ComboBox ID="comboBroodlordPlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioBroodlord3" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>                                                                                                                                                                                            
@@ -145,7 +145,7 @@
             <ajaxToolkit:ComboBox ID="comboFiremawPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioFiremaw1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -155,7 +155,7 @@
             <ajaxToolkit:ComboBox ID="comboFiremawPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioFiremaw2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -168,7 +168,7 @@
             <ajaxToolkit:ComboBox ID="comboEbonrocPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioEbonroc1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -178,7 +178,7 @@
             <ajaxToolkit:ComboBox ID="comboEbonrocPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioEbonroc2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -191,7 +191,7 @@
             <ajaxToolkit:ComboBox ID="comboFlamegorePlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioFlamegore1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-            <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+            <asp:ListItem Selected="True">Mainspec</asp:ListItem>
             <asp:ListItem>Offspec</asp:ListItem>
             <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -201,7 +201,7 @@
             <ajaxToolkit:ComboBox ID="comboFlamegorePlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioFlamegore2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-            <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+            <asp:ListItem Selected="True">Mainspec</asp:ListItem>
             <asp:ListItem>Offspec</asp:ListItem>
             <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -215,7 +215,7 @@
 			<ajaxToolkit:ComboBox ID="comboChromagPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioChromag1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>
@@ -225,7 +225,7 @@
 			<ajaxToolkit:ComboBox ID="comboChromagPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioChromag2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>
@@ -235,7 +235,7 @@
 			<ajaxToolkit:ComboBox ID="comboChromagPlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioChromag3" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>  
@@ -245,7 +245,7 @@
 			<ajaxToolkit:ComboBox ID="comboChromagPlayer4" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioChromag4" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>           
@@ -258,7 +258,7 @@
 			<ajaxToolkit:ComboBox ID="comboNefPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioNef1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>
@@ -268,7 +268,7 @@
 			<ajaxToolkit:ComboBox ID="comboNefPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioNef2" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>
@@ -278,7 +278,7 @@
 			<ajaxToolkit:ComboBox ID="comboNefPlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioNef3" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>  
@@ -288,7 +288,7 @@
 			<ajaxToolkit:ComboBox ID="comboNefPlayer4" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioNef4" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList> 
@@ -298,7 +298,7 @@
 			<ajaxToolkit:ComboBox ID="comboNefPlayer5" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" >
 			</ajaxToolkit:ComboBox>
 			<asp:RadioButtonList ID="radioNef5" RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-				<asp:ListItem Selected="True">MainSpec</asp:ListItem>
+				<asp:ListItem Selected="True">Mainspec</asp:ListItem>
 				<asp:ListItem>Offspec</asp:ListItem>
 				<asp:ListItem>PvP</asp:ListItem>
 			</asp:RadioButtonList>   
@@ -311,7 +311,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer1" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -321,7 +321,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash2"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -331,7 +331,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash3"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -341,7 +341,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer4" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash4"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -351,7 +351,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer5" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash5"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -361,7 +361,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer6" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash6"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -371,7 +371,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer7" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash7"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -381,7 +381,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer8" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash8"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -391,7 +391,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer9" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash9"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>
@@ -401,7 +401,7 @@
             <ajaxToolkit:ComboBox ID="comboTrashPlayer10" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
             </ajaxToolkit:ComboBox>
             <asp:RadioButtonList ID="radioTrash10"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px">
-                <asp:ListItem Selected="True">MainSpec</asp:ListItem>
+                <asp:ListItem Selected="True">Mainspec</asp:ListItem>
                 <asp:ListItem>Offspec</asp:ListItem>
                 <asp:ListItem>PvP</asp:ListItem>
             </asp:RadioButtonList>

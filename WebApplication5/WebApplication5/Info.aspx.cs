@@ -48,15 +48,18 @@ namespace WebApplication5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            createClassGrid("Warrior", "DPS", dpsWarriorGridView, "#CC4125", "#E6B8AF", "DPS War");
-            createClassGrid("Warrior", "Tank", tankWarriorGridView, "#CC4125", "#E6B8AF", "Tank");
-            createClassGrid("Rogue", "", rogueGridView, "#ffff00", "#ffe599", "Rogue");
-            createClassGrid("Hunter", "", hunterGridView, "#6aa84f", "#b6d7a8", "Hunter");
-            createClassGrid("Druid", "", druidGridView, "#ff9900", "#f9cb9c", "Druid");
-            createClassGrid("Paladin", "", paladinGridView, "#ff00ff", "#d5a6bd", "Paladin");
-            createClassGrid("Priest", "", priestGridView, "#000000", "#cccccc", "Priest");
-            createClassGrid("Mage", "", mageGridView, "#a86e8", "#c9daf8", "Mage");
-            createClassGrid("Warlock", "Shadow", warlockGridView, "#674ea7", "#b4a7d6", "Warlock");
+            if (!IsPostBack)
+            {
+                createClassGrid("Warrior", "DPS", dpsWarriorGridView, "#CC4125", "#E6B8AF", "DPS War");
+                createClassGrid("Warrior", "Tank", tankWarriorGridView, "#CC4125", "#E6B8AF", "Tank");
+                createClassGrid("Rogue", "", rogueGridView, "#ffff00", "#ffe599", "Rogue");
+                createClassGrid("Hunter", "", hunterGridView, "#6aa84f", "#b6d7a8", "Hunter");
+                createClassGrid("Druid", "", druidGridView, "#ff9900", "#f9cb9c", "Druid");
+                createClassGrid("Paladin", "", paladinGridView, "#ff00ff", "#d5a6bd", "Paladin");
+                createClassGrid("Priest", "", priestGridView, "#000000", "#cccccc", "Priest");
+                createClassGrid("Mage", "", mageGridView, "#a86e8", "#c9daf8", "Mage");
+                createClassGrid("Warlock", "Shadow", warlockGridView, "#674ea7", "#b4a7d6", "Warlock");
+            }
         }
 
         public void createClassGrid(string playerClass, string playerSubClass, GridView GridViewName, string hexColorInfoRows, string hexColorHeaderRows, string playerGroupHeaderText)
@@ -164,7 +167,7 @@ namespace WebApplication5
 	                                --count (RaidDate) as totalRecentRaids,
 	                                Cast(CONVERT(Decimal(10,2),(SUM(RecentAttendance.AttendanceValue) * 100.0 / count(RecentAttendance.RaidDate))) as decimal(10,2)) 
 		                                as RecentPercentageAttendance,
-                                    (select PvpLootScore from Roster where PlayerName = 'Forest') as PvpLootScore
+                                    (select PvpLootScore from Roster where PlayerName = @PlayerName) as PvpLootScore
                                 FROM 
 	                                (SELECT DISTINCT TOP 5 * FROM Attendance WHERE PlayerName = @PlayerName ORDER BY RaidDate DESC) RecentAttendance 
 											                                inner join Roster on Roster.PlayerName = RecentAttendance.PlayerName
@@ -216,6 +219,7 @@ namespace WebApplication5
             }
         }
 
+
         protected void dpsWarriorGridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             colorGridAttendanceColumn(e);
@@ -223,6 +227,7 @@ namespace WebApplication5
 
         protected void tankWarriorGridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
+
             colorGridAttendanceColumn(e);
         }
 
@@ -259,6 +264,257 @@ namespace WebApplication5
         protected void warlockGridView_RowDataBound(object sender, GridViewRowEventArgs e)
         {
             colorGridAttendanceColumn(e);
+        }
+
+        protected void getPlayerLootHistory_Click(object sender, EventArgs e)
+        {
+            if (comboPlayer1.SelectedIndex != -1)
+            {
+                labelT1.Visible = true;
+                labelMC.Visible = true;
+                labelOny.Visible = true;
+                labelT2.Visible = true;
+                labelBWL.Visible = true;
+                labelT25.Visible = true;
+                labelAQ.Visible = true;
+                labelT3.Visible = true;
+                labelNaxx.Visible = true;
+
+                DataTable dtWowheadLinks = new DataTable();
+
+                string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+                SqlConnection connection = new SqlConnection(connectionString);
+                connection.Open();
+                SqlCommand command = connection.CreateCommand();
+                command.CommandType = CommandType.Text;
+
+                #region Get Player Class For Tier Search
+                SqlCommand playerClassCommand = connection.CreateCommand();
+                playerClassCommand.CommandType = CommandType.Text;
+                playerClassCommand.CommandText = "select PlayerClass from Roster where PlayerName = @PlayerName";
+                playerClassCommand.Parameters.AddWithValue("PlayerName", comboPlayer1.SelectedValue);
+                DataTable playerClassDt = new DataTable();
+                SqlDataAdapter classDa = new SqlDataAdapter(playerClassCommand);
+                classDa.Fill(playerClassDt);
+                string playerClass = string.Empty;
+                if(playerClassDt != null && playerClassDt.Rows.Count != 0)
+                {
+                    playerClass = playerClassDt.Rows[0]["PlayerClass"].ToString();
+                }
+                #endregion
+
+                #region MC Loot
+                command.CommandText = @"select distinct PlayerLoot.ItemName, Loot.wowheadLink from PlayerLoot inner join Loot on PlayerLoot.ItemName = Loot.ItemName where PlayerLoot.PlayerName = @PlayerName and Loot.RaidName = 'MC'";
+            
+                command.Parameters.AddWithValue("PlayerName", comboPlayer1.SelectedValue);
+            
+                SqlDataAdapter da = new SqlDataAdapter(command);
+                da.Fill(dtWowheadLinks);
+
+                StringBuilder lootMC = new StringBuilder();
+                StringBuilder lootT1 = new StringBuilder();
+                StringBuilder lootT2 = new StringBuilder();
+                literalMC.Text = "<table>";
+                literalT1.Text = "<table>";
+                literalT2.Text = "<table>";
+            
+                foreach (DataRow linkName in dtWowheadLinks.Rows)
+                {
+
+                    string itemName = linkName["ItemName"].ToString();
+                    if(itemName.Contains("T1"))
+                    {
+                        string itemSlot = itemName.Substring(2);
+                        DataTable tier1ItemDt = new DataTable();
+                        SqlCommand getTier1ItemCommand = connection.CreateCommand();
+                        getTier1ItemCommand.CommandType = CommandType.Text;
+                        getTier1ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 1 and ItemSlot = @ItemSlot";
+                        getTier1ItemCommand.Parameters.AddWithValue("@Class", playerClass);
+                        getTier1ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
+                        SqlDataAdapter tier1ItemDa = new SqlDataAdapter(getTier1ItemCommand);
+                        tier1ItemDa.Fill(tier1ItemDt);
+                        string tier1wowheadLink = tier1ItemDt.Rows[0]["wowheadLink"].ToString();
+                        lootT1.Append("<tr><td><a href=" + tier1wowheadLink + "</a></td></tr>");
+                    }
+                    else if (itemName.Contains("T2"))
+                    {
+                        string itemSlot = itemName.Substring(2);
+                        DataTable tier2ItemDt = new DataTable();
+                        SqlCommand getTier2ItemCommand = connection.CreateCommand();
+                        getTier2ItemCommand.CommandType = CommandType.Text;
+                        getTier2ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 2 and ItemSlot = @ItemSlot";
+                        getTier2ItemCommand.Parameters.AddWithValue("@Class", playerClass);
+                        getTier2ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
+                        SqlDataAdapter tier1ItemDa = new SqlDataAdapter(getTier2ItemCommand);
+                        tier1ItemDa.Fill(tier2ItemDt);
+                        string tier2wowheadLink = tier2ItemDt.Rows[0]["wowheadLink"].ToString();
+                        lootT2.Append("<tr><td><a href=" + tier2wowheadLink + "</a></td></tr>");
+                    }
+                    else
+                    {
+                        string wowheadLink = linkName["wowheadLink"].ToString();
+                        lootMC.Append("<tr><td><a href=" + wowheadLink + "</a></td></tr>");
+                    }
+                }
+
+                literalT1.Text = literalT1.Text + lootT1.ToString() + "</table>";
+                literalMC.Text = literalMC.Text + lootMC.ToString() + "</table>";
+                literalT2.Text = literalT2.Text + lootT2.ToString(); // Must search MC, Ony, and BWL regions before closing this with a </table> tag
+            
+                #endregion
+
+                #region Ony Loot
+                dtWowheadLinks.Clear();
+                command.CommandText = @"select distinct PlayerLoot.ItemName, Loot.wowheadLink from PlayerLoot inner join Loot on PlayerLoot.ItemName = Loot.ItemName where PlayerLoot.PlayerName = @PlayerName and Loot.RaidName = 'Ony'";
+
+                da = new SqlDataAdapter(command);
+                da.Fill(dtWowheadLinks);
+
+                StringBuilder lootOny = new StringBuilder();
+                literalOny.Text = "<table>";
+                foreach (DataRow linkName in dtWowheadLinks.Rows)
+                {
+                    string itemName = linkName["ItemName"].ToString();
+                    if (itemName.Contains("T2"))
+                    {
+                        string itemSlot = itemName.Substring(2);
+                        DataTable tier2ItemDt = new DataTable();
+                        SqlCommand getTier2ItemCommand = connection.CreateCommand();
+                        getTier2ItemCommand.CommandType = CommandType.Text;
+                        getTier2ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 2 and ItemSlot = @ItemSlot";
+                        getTier2ItemCommand.Parameters.AddWithValue("@Class", playerClass);
+                        getTier2ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
+                        SqlDataAdapter tier1ItemDa = new SqlDataAdapter(getTier2ItemCommand);
+                        tier1ItemDa.Fill(tier2ItemDt);
+                        string tier2wowheadLink = tier2ItemDt.Rows[0]["wowheadLink"].ToString();
+                        lootT2.Append("<tr><td><a href=" + tier2wowheadLink + "</a></td></tr>");
+                    }
+                    else
+                    {
+                        string wowheadLink = linkName["wowheadLink"].ToString();
+                        lootOny.Append("<tr><td><a href=" + wowheadLink + "</a></td></tr>");
+                    }
+                }
+                literalOny.Text = literalOny.Text + lootOny.ToString() + "</table>";
+                literalT2.Text = literalT2.Text + lootT2.ToString(); // Must search MC, Ony, and BWL regions before closing this with a </table> tag
+
+                #endregion
+
+                #region BWL Loot
+                dtWowheadLinks.Clear();
+                command.CommandText = @"select distinct PlayerLoot.ItemName, Loot.wowheadLink from PlayerLoot inner join Loot on PlayerLoot.ItemName = Loot.ItemName where PlayerLoot.PlayerName = @PlayerName and Loot.RaidName = 'BWL'";
+
+                da = new SqlDataAdapter(command);
+                da.Fill(dtWowheadLinks);
+
+                StringBuilder lootBWL = new StringBuilder();
+                literalBWL.Text = "<table>";
+                foreach (DataRow linkName in dtWowheadLinks.Rows)
+                {
+                    string itemName = linkName["ItemName"].ToString();
+                    if (itemName.Contains("T2"))
+                    {
+                        string itemSlot = itemName.Substring(2);
+                        DataTable tier2ItemDt = new DataTable();
+                        SqlCommand getTier2ItemCommand = connection.CreateCommand();
+                        getTier2ItemCommand.CommandType = CommandType.Text;
+                        getTier2ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 2 and ItemSlot = @ItemSlot";
+                        getTier2ItemCommand.Parameters.AddWithValue("@Class", playerClass);
+                        getTier2ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
+                        SqlDataAdapter tier1ItemDa = new SqlDataAdapter(getTier2ItemCommand);
+                        tier1ItemDa.Fill(tier2ItemDt);
+                        string tier2wowheadLink = tier2ItemDt.Rows[0]["wowheadLink"].ToString();
+                        lootT2.Append("<tr><td><a href=" + tier2wowheadLink + "</a></td></tr>");
+                    }
+                    else
+                    {
+                        string wowheadLink = linkName["wowheadLink"].ToString();
+                        lootBWL.Append("<tr><td><a href=" + wowheadLink + "</a></td></tr>");
+                    }
+
+                }
+                literalBWL.Text = literalBWL.Text + lootBWL.ToString() + "</table>";
+                literalT2.Text = literalT2.Text + lootT2.ToString() + "</table>"; // Finished searching MC, Ony, and BWL loot for T2. Put </table> tag on the literalT2
+                #endregion
+
+                #region AQ Loot            
+                dtWowheadLinks.Clear();
+                command.CommandText = @"select distinct PlayerLoot.ItemName, Loot.wowheadLink from PlayerLoot inner join Loot on PlayerLoot.ItemName = Loot.ItemName where PlayerLoot.PlayerName = @PlayerName and Loot.RaidName = 'AQ40'";
+
+                da = new SqlDataAdapter(command);
+                da.Fill(dtWowheadLinks);
+
+                StringBuilder lootAQ = new StringBuilder();
+                StringBuilder lootT25 = new StringBuilder();
+                literalAQ.Text = "<table>";
+                literalT25.Text = "<table>";
+                foreach (DataRow linkName in dtWowheadLinks.Rows)
+                {
+                    string itemName = linkName["ItemName"].ToString();
+                    if (itemName.Contains("T2.5"))
+                    {
+                        string itemSlot = itemName.Substring(4);
+                        DataTable tier25ItemDt = new DataTable();
+                        SqlCommand getTier25ItemCommand = connection.CreateCommand();
+                        getTier25ItemCommand.CommandType = CommandType.Text;
+                        getTier25ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 25 and ItemSlot = @ItemSlot";
+                        getTier25ItemCommand.Parameters.AddWithValue("@Class", playerClass);
+                        getTier25ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
+                        SqlDataAdapter tier25ItemDa = new SqlDataAdapter(getTier25ItemCommand);
+                        tier25ItemDa.Fill(tier25ItemDt);
+                        string tier25wowheadLink = tier25ItemDt.Rows[0]["wowheadLink"].ToString();
+                        lootT25.Append("<tr><td><a href=" + tier25wowheadLink + "</a></td></tr>");
+                    }
+                    else
+                    {
+                        string wowheadLink = linkName["wowheadLink"].ToString();
+                        lootAQ.Append("<tr><td><a href=" + wowheadLink + "</a></td></tr>");
+                    }
+                }
+                literalAQ.Text = literalAQ.Text + lootAQ.ToString() + "</table>";
+                literalT25.Text = literalT25.Text + lootT25.ToString() + "</table>";
+                #endregion
+
+                #region Naxx Loot
+                dtWowheadLinks.Clear();
+                command.CommandText = @"select distinct PlayerLoot.ItemName, Loot.wowheadLink from PlayerLoot inner join Loot on PlayerLoot.ItemName = Loot.ItemName where PlayerLoot.PlayerName = @PlayerName and Loot.RaidName = 'Naxx'";
+
+                da = new SqlDataAdapter(command);
+                da.Fill(dtWowheadLinks);
+
+                StringBuilder lootNaxx = new StringBuilder();
+                StringBuilder lootT3 = new StringBuilder();
+                literalNaxx.Text = "<table>";
+                literalT3.Text = "<table>";
+                foreach (DataRow linkName in dtWowheadLinks.Rows)
+                {
+                    string itemName = linkName["ItemName"].ToString();
+                    if (itemName.Contains("T3"))
+                    {
+                        string itemSlot = itemName.Substring(2);
+                        DataTable tier3ItemDt = new DataTable();
+                        SqlCommand getTier3ItemCommand = connection.CreateCommand();
+                        getTier3ItemCommand.CommandType = CommandType.Text;
+                        getTier3ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 3 and ItemSlot = @ItemSlot";
+                        getTier3ItemCommand.Parameters.AddWithValue("@Class", playerClass);
+                        getTier3ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
+                        SqlDataAdapter tier3ItemDa = new SqlDataAdapter(getTier3ItemCommand);
+                        tier3ItemDa.Fill(tier3ItemDt);
+                        string tier3wowheadLink = tier3ItemDt.Rows[0]["wowheadLink"].ToString();
+                        lootT3.Append("<tr><td><a href=" + tier3wowheadLink + "</a></td></tr>");
+                    }
+                    else
+                    {
+                        string wowheadLink = linkName["wowheadLink"].ToString();
+                        lootNaxx.Append("<tr><td><a href=" + wowheadLink + "</a></td></tr>");
+                    }
+
+
+                }
+                literalNaxx.Text = literalNaxx.Text + lootNaxx.ToString() + "</table>";
+                literalT3.Text = literalT3.Text + lootT3.ToString() + "</table>";
+                    #endregion
+            }
         }
     }
 }

@@ -1,11 +1,13 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/Site.Master" CodeBehind="Info.aspx.cs" Inherits="WebApplication5.Info" %>
 
 
-
+<%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-
+        <script>var whTooltips = {colorLinks: true, iconizeLinks: true, renameLinks: true};</script>
+        <script src="http://wow.zamimg.com/widgets/power.js"></script>
+    
 
         <table style="display:block;">
             <tr>
@@ -200,6 +202,44 @@
         </table>
 
 
+    <br /><br /><br /><br />
+    <style type="text/css">
+        .inlineBlock { display: inline-block; }
+    </style>
+
+    <asp:SqlDataSource ID="Roster" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT PlayerName FROM Roster WHERE IsActive = 1"></asp:SqlDataSource>
+
+    <p>Player</p>
+    <ajaxToolkit:ComboBox ID="comboPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
+    </ajaxToolkit:ComboBox><br />
+    <asp:Button ID="getPlayerLootHistory" runat="server" Text="Show Player Loot" OnClick="getPlayerLootHistory_Click" /><br /><br />
+    
+    <asp:Label ID="labelT1" runat="server" Text="Tier 1:" Visible="False" Font-Bold="True"></asp:Label>
+    <asp:Literal ID="literalT1" runat="server" /><br />
+
+    <asp:Label ID="labelMC" runat="server" Text="Molten Core:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalMC" runat="server" /><br />
+
+    <asp:Label ID="labelOny" runat="server" Text="Onyxia:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalOny" runat="server" /><br />
+
+    <asp:Label ID="labelT2" runat="server" Text="Tier 2:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalT2" runat="server" /><br />
+
+    <asp:Label ID="labelBWL" runat="server" Text="Blackwing Lair:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalBWL" runat="server" /><br />
+
+    <asp:Label ID="labelT25" runat="server" Text="Tier 2.5:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalT25" runat="server" /><br />
+
+    <asp:Label ID="labelAQ" runat="server" Text="Ahn'Qiraj:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalAQ" runat="server" /><br />
+
+    <asp:Label ID="labelT3" runat="server" Text="Tier 2.5:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalT3" runat="server" /><br />
+
+    <asp:Label ID="labelNaxx" runat="server" Text="Naxxramas:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Literal ID ="literalNaxx" runat="server" /><br />
 
     </asp:Content>
 
