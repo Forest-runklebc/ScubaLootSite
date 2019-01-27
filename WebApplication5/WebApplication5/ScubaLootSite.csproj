@@ -139,6 +139,7 @@
     <Content Include="Info.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="MoltenCore.aspx" />
+    <Content Include="ZulGurub.aspx" />
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Naxx.aspx" />
     <Content Include="Onyxia.aspx" />
@@ -284,6 +285,13 @@
     </Compile>
     <Compile Include="MoltenCore.aspx.designer.cs">
       <DependentUpon>MoltenCore.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ZulGurub.aspx.cs">
+      <DependentUpon>ZulGurub.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ZulGurub.aspx.designer.cs">
+      <DependentUpon>ZulGurub.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

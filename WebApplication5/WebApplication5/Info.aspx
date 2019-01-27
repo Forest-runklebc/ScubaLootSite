@@ -202,17 +202,31 @@
         </table>
 
 
-    <br /><br /><br /><br />
+        <br />
+        <br />
+
+
+
+    <br />
+    <asp:SqlDataSource ID="Roster" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT PlayerName FROM Roster WHERE IsActive = 1"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="AllLoot" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT distinct ItemName from Loot"></asp:SqlDataSource>
     <style type="text/css">
         .inlineBlock { display: inline-block; }
     </style>
 
-    <asp:SqlDataSource ID="Roster" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT PlayerName FROM Roster WHERE IsActive = 1"></asp:SqlDataSource>
+    <p><b>Players With Item</b></p>
+    <ajaxToolkit:ComboBox ID="comboItemNameToSearch" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="AllLoot" DataTextField="ItemName" DataValueField="ItemName" MaxLength="0" style="display: inline;"  >
+    </ajaxToolkit:ComboBox><br />
+    <asp:Button ID="getPlayersWithItem" runat="server" Text="Show Players With Item" OnClick="getPlayersWithItem_Click"/><br />
+    <asp:Label ID="labelPlayersWithItem" runat="server" Text="Label" Visible="False"></asp:Label>
+    <br /><br /><br />
 
-    <p>Player</p>
+    
+
+    <p><b>Player Loot History</b></p>
     <ajaxToolkit:ComboBox ID="comboPlayer1" runat="server" CssClass="inlineBlock" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  >
     </ajaxToolkit:ComboBox><br />
-    <asp:Button ID="getPlayerLootHistory" runat="server" Text="Show Player Loot" OnClick="getPlayerLootHistory_Click" /><br /><br />
+    <asp:Button ID="getPlayerLootHistory" runat="server" Text="Show Player Loot History" OnClick="getPlayerLootHistory_Click"/><br /><br />
     
     <asp:Label ID="labelT1" runat="server" Text="Tier 1:" Visible="False" Font-Bold="True"></asp:Label>
     <asp:Literal ID="literalT1" runat="server" /><br />
@@ -235,7 +249,7 @@
     <asp:Label ID="labelAQ" runat="server" Text="Ahn'Qiraj:" Visible="False" Font-Bold="True"></asp:Label><br />
     <asp:Literal ID ="literalAQ" runat="server" /><br />
 
-    <asp:Label ID="labelT3" runat="server" Text="Tier 2.5:" Visible="False" Font-Bold="True"></asp:Label><br />
+    <asp:Label ID="labelT3" runat="server" Text="Tier 3:" Visible="False" Font-Bold="True"></asp:Label><br />
     <asp:Literal ID ="literalT3" runat="server" /><br />
 
     <asp:Label ID="labelNaxx" runat="server" Text="Naxxramas:" Visible="False" Font-Bold="True"></asp:Label><br />

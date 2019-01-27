@@ -516,5 +516,46 @@ namespace WebApplication5
                     #endregion
             }
         }
+
+        protected void getPlayersWithItem_Click(object sender, EventArgs e)
+        {
+            string getPlayersWithItem = "select PlayerName from PlayerLoot where Itemname = @ItemName";
+
+            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand command = connection.CreateCommand();
+            command.CommandType = CommandType.Text;
+            command.CommandText = getPlayersWithItem;
+            command.Parameters.AddWithValue("ItemName", comboItemNameToSearch.SelectedValue);
+            da.SelectCommand = command;
+            DataTable dt = new DataTable();
+
+            connection.Open();
+            da.Fill(dt);
+            connection.Close();
+
+            List<string> listPlayersWithItem = new List<string>();
+
+            foreach (DataRow playerName in dt.Rows)
+            {
+                string player = playerName["PlayerName"].ToString();
+                //labelHasOnyBag.Text = labelHasOnyBag.Text + itemName + ", ";
+                listPlayersWithItem.Add(player);
+            }
+
+            labelPlayersWithItem.Visible = true;
+            string[] arrayPlayersWithItem = listPlayersWithItem.ToArray();
+            string allPlayersWithOnyBag = string.Join(", ", arrayPlayersWithItem.Where(s => !string.IsNullOrEmpty(s)));
+            if (arrayPlayersWithItem.Length == 0)
+            {
+                labelPlayersWithItem.Text = "No players have this item";
+            }
+            else
+            {
+                labelPlayersWithItem.Text = allPlayersWithOnyBag;
+            }
+        }
     }
 }

@@ -48,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" runat="server" href="~/">Scuba Cops Loot</a>
+                    <%--<a class="navbar-brand" runat="server" href="~/">Scuba Cops Loot</a>--%>
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
@@ -58,6 +58,7 @@
                         <li><a runat="server" href="~/MoltenCore">Molten Core</a></li>
                         <li><a runat="server" href="~/Onyxia">Onyxia</a></li>
                         <li><a runat="server" href="~/BlackwingLair">Blackwing Lair</a></li>
+                        <li><a runat="server" href="~/ZulGurub">Zul'Gurub</a></li>
                         <li><a runat="server" href="~/AQ40">Ahn'Qiraj</a></li>
                         <li><a runat="server" href="~/Naxx">Naxxaramas</a></li>
                         <li><a runat="server" href="~/Attendance">Attendance</a></li>

@@ -38,14 +38,20 @@ namespace WebApplication5
 
             connection.Open();
             da.Fill(dt);
-
             connection.Close();
+
+            List<string> listPlayersWithOnyBag = new List<string>();
 
             foreach (DataRow playerName in dt.Rows)
             {
-                string itemName = playerName["PlayerName"].ToString();
-                labelHasOnyBag.Text = labelHasOnyBag.Text + itemName + ", ";
+                string player = playerName["PlayerName"].ToString();
+                //labelHasOnyBag.Text = labelHasOnyBag.Text + itemName + ", ";
+                listPlayersWithOnyBag.Add(player);
             }
+
+            string[] arrayPlayersWithOnyBag = listPlayersWithOnyBag.ToArray();
+            string allPlayersWithOnyBag = string.Join(", ", arrayPlayersWithOnyBag.Where(s => !string.IsNullOrEmpty(s)));
+            labelHasOnyBag.Text = allPlayersWithOnyBag;
         }
 
         protected void WriteToDatabase_Click(object sender, EventArgs e)
