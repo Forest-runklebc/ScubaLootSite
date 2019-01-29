@@ -17,14 +17,14 @@
 
         <p><b>Add New Player(s)</b></p>
     <p>Player&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rank&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Class&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Subclass(Warriors/Priests)</p>
-    <ajaxToolkit:ComboBox ID="ComboBox1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayer1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="ComboBox2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayerRank1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
         <asp:ListItem>Trial</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="ComboBox3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayerClass1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Warrior</asp:ListItem>
         <asp:ListItem>Rogue</asp:ListItem>
         <asp:ListItem>Hunter</asp:ListItem>
@@ -34,25 +34,25 @@
         <asp:ListItem>Mage</asp:ListItem>
         <asp:ListItem>Warlock</asp:ListItem>
     </ajaxToolkit:ComboBox>
-        <ajaxToolkit:ComboBox ID="ComboBox4" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+        <ajaxToolkit:ComboBox ID="comboNewPlayerSubClass1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Tank</asp:ListItem>
         <asp:ListItem>DPS</asp:ListItem>
         <asp:ListItem>Shadow</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <asp:RadioButtonList ID="RadioButtonList1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
+    <asp:RadioButtonList ID="radioNewActive1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
         <asp:ListItem Selected="True">Active</asp:ListItem>
         <asp:ListItem>Inactive</asp:ListItem>
     </asp:RadioButtonList>
 
     <br />
-    <ajaxToolkit:ComboBox ID="ComboBox5" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayer2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="ComboBox6" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayerRank2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
         <asp:ListItem>Trial</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="ComboBox7" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayerClass2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Warrior</asp:ListItem>
         <asp:ListItem>Rogue</asp:ListItem>
         <asp:ListItem>Hunter</asp:ListItem>
@@ -62,25 +62,25 @@
         <asp:ListItem>Mage</asp:ListItem>
         <asp:ListItem>Warlock</asp:ListItem>
     </ajaxToolkit:ComboBox>
-        <ajaxToolkit:ComboBox ID="ComboBox8" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+        <ajaxToolkit:ComboBox ID="comboNewPlayerSubClass2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Tank</asp:ListItem>
         <asp:ListItem>DPS</asp:ListItem>
         <asp:ListItem>Shadow</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <asp:RadioButtonList ID="RadioButtonList2"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
+    <asp:RadioButtonList ID="radioNewActive2"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
         <asp:ListItem Selected="True">Active</asp:ListItem>
         <asp:ListItem>Inactive</asp:ListItem>
     </asp:RadioButtonList>
 
         <br />
-    <ajaxToolkit:ComboBox ID="ComboBox9" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayer3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="ComboBox10" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayerRank3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
         <asp:ListItem>Trial</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="ComboBox11" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboNewPlayerClass3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Warrior</asp:ListItem>
         <asp:ListItem>Rogue</asp:ListItem>
         <asp:ListItem>Hunter</asp:ListItem>
@@ -90,30 +90,30 @@
         <asp:ListItem>Mage</asp:ListItem>
         <asp:ListItem>Warlock</asp:ListItem>
     </ajaxToolkit:ComboBox>
-        <ajaxToolkit:ComboBox ID="ComboBox12" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+        <ajaxToolkit:ComboBox ID="comboNewPlayerSubClass3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Tank</asp:ListItem>
         <asp:ListItem>DPS</asp:ListItem>
         <asp:ListItem>Shadow</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <asp:RadioButtonList ID="RadioButtonList3"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
+    <asp:RadioButtonList ID="radioNewActive3"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
         <asp:ListItem Selected="True">Active</asp:ListItem>
         <asp:ListItem>Inactive</asp:ListItem>
     </asp:RadioButtonList>
     <br /><br />
-    <asp:Button ID="buttonAddNewPlayers" runat="server" Text="Add Player(s)" />
+    <asp:Button ID="buttonAddNewPlayers" runat="server" Text="Add Player(s)" OnClick="buttonAddNewPlayers_Click" />
 
 
     <br /><br /><br /><br />
     <p><b>Update Existing Player(s)</b></p>
     <p>Player&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rank&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Class&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Subclass(Warriors/Priests)</p>
-    <ajaxToolkit:ComboBox ID="comboPlayer1" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdatePlayer1" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="comboRanks1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdateRanks1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
         <asp:ListItem>Trial</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="comboPlayerClass" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdateClass1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Warrior</asp:ListItem>
         <asp:ListItem>Rogue</asp:ListItem>
         <asp:ListItem>Hunter</asp:ListItem>
@@ -123,25 +123,25 @@
         <asp:ListItem>Mage</asp:ListItem>
         <asp:ListItem>Warlock</asp:ListItem>
     </ajaxToolkit:ComboBox>
-        <ajaxToolkit:ComboBox ID="comboPlayerSubClass" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+        <ajaxToolkit:ComboBox ID="comboUpdateSubClass1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Tank</asp:ListItem>
         <asp:ListItem>DPS</asp:ListItem>
         <asp:ListItem>Shadow</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <asp:RadioButtonList ID="radioIsActive1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
+    <asp:RadioButtonList ID="radioUpdateActive1"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
         <asp:ListItem Selected="True">Active</asp:ListItem>
         <asp:ListItem>Inactive</asp:ListItem>
     </asp:RadioButtonList>
 
     <br />
-    <ajaxToolkit:ComboBox ID="comboPlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdatePlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="comboRanks2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdateRanks2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
         <asp:ListItem>Trial</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="comboPlayerClass2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdateClass2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Warrior</asp:ListItem>
         <asp:ListItem>Rogue</asp:ListItem>
         <asp:ListItem>Hunter</asp:ListItem>
@@ -151,25 +151,25 @@
         <asp:ListItem>Mage</asp:ListItem>
         <asp:ListItem>Warlock</asp:ListItem>
     </ajaxToolkit:ComboBox>
-        <ajaxToolkit:ComboBox ID="comboPlayerSubClas2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+        <ajaxToolkit:ComboBox ID="comboUpdateSubClass2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Tank</asp:ListItem>
         <asp:ListItem>DPS</asp:ListItem>
         <asp:ListItem>Shadow</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <asp:RadioButtonList ID="radioIsActive2"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
+    <asp:RadioButtonList ID="radioUpdateActive2"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
         <asp:ListItem Selected="True">Active</asp:ListItem>
         <asp:ListItem>Inactive</asp:ListItem>
     </asp:RadioButtonList>
 
         <br />
-    <ajaxToolkit:ComboBox ID="comboPlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdatePlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="comboRanks3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdateRanks3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
         <asp:ListItem>Member</asp:ListItem>
         <asp:ListItem>Trial</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <ajaxToolkit:ComboBox ID="comboPlayerClass3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdateClass3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Warrior</asp:ListItem>
         <asp:ListItem>Rogue</asp:ListItem>
         <asp:ListItem>Hunter</asp:ListItem>
@@ -179,17 +179,17 @@
         <asp:ListItem>Mage</asp:ListItem>
         <asp:ListItem>Warlock</asp:ListItem>
     </ajaxToolkit:ComboBox>
-        <ajaxToolkit:ComboBox ID="comboPlayerSubClas3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
+        <ajaxToolkit:ComboBox ID="comboUpdateSubClass3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Tank</asp:ListItem>
         <asp:ListItem>DPS</asp:ListItem>
         <asp:ListItem>Shadow</asp:ListItem>
     </ajaxToolkit:ComboBox>
-    <asp:RadioButtonList ID="radioIsActive3"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
+    <asp:RadioButtonList ID="radioUpdateActive3"  RepeatDirection="Horizontal" CssClass="inlineBlock" runat="server" Height="16px" Width="500px" style="display: inline;">
         <asp:ListItem Selected="True">Active</asp:ListItem>
         <asp:ListItem>Inactive</asp:ListItem>
     </asp:RadioButtonList>
     <br /><br />
-    <asp:Button ID="buttonUpdateExistingPlayers" runat="server" Text="Update Player(s)" />
+    <asp:Button ID="buttonUpdateExistingPlayers" runat="server" Text="Update Player(s)" OnClick="buttonUpdateExistingPlayers_Click" />
 
 
 
