@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="BLAKE-Web.config Connection String" description="BLAKE Connection String used in web.config by the application to access the database." defaultValue="Data Source=aa1wr03lvyw0z9n.cwfckr81pscl.us-east-2.rds.amazonaws.com,1433;Initial Catalog=scuba;Integrated Security=False;User ID=scubacopsdb;Password=scubacops123!" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\Blake\\Documents\\GitHub\\ScubaLootSite\\WebApplication5\\WebApplication5\\obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='BLAKE']/@connectionString" />
+  </parameter>
+</parameters>

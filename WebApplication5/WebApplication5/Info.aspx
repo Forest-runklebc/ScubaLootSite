@@ -33,7 +33,7 @@
                 </td>
 
                 <td style="padding: 0">
-                <asp:gridview ID="dpsWarriorGridView" runat="server" AutoGenerateColumns="false" RowStyle-Width="100" OnRowDataBound="tankWarriorGridView_RowDataBound" BorderStyle="Solid">
+                <asp:gridview ID="dpsWarriorGridView" runat="server" AutoGenerateColumns="false" RowStyle-Width="100" OnRowDataBound="dpsWarriorGridView_RowDataBound" BorderStyle="Solid">
                         <Columns>
                             <asp:BoundField DataField="PlayerName" HeaderText ="DPS War"/>
                             <asp:BoundField DataField="ForeverLootScore" HeaderText ="Loot" ItemStyle-HorizontalAlign="Right" >

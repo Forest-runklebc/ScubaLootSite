@@ -48,6 +48,10 @@ namespace WebApplication5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (Session["SessionUserID"] == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
             if (!IsPostBack)
             {
                 createClassGrid("Warrior", "DPS", dpsWarriorGridView, "#CC4125", "#E6B8AF", "DPS War");

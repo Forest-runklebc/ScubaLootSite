@@ -9,6 +9,7 @@ using System.Text;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Drawing;
 
 namespace WebApplication5
 {
@@ -16,7 +17,25 @@ namespace WebApplication5
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            calendarZG.SelectedDate = DateTime.Today;
+            if (Session["SessionUserID"] == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
+            if (!IsPostBack)
+            {
+                calendarZG.SelectedDate = DateTime.Today;
+
+                createClassGrid("Warrior", "DPS", dpsWarriorGridView, "#CC4125", "#E6B8AF", "DPS War");
+                createClassGrid("Warrior", "Tank", tankWarriorGridView, "#CC4125", "#E6B8AF", "Tank");
+                createClassGrid("Rogue", "", rogueGridView, "#ffff00", "#ffe599", "Rogue");
+                createClassGrid("Hunter", "", hunterGridView, "#6aa84f", "#b6d7a8", "Hunter");
+                createClassGrid("Druid", "", druidGridView, "#ff9900", "#f9cb9c", "Druid");
+                createClassGrid("Paladin", "", paladinGridView, "#ff00ff", "#d5a6bd", "Paladin");
+                createClassGrid("Priest", "", priestGridView, "#000000", "#cccccc", "Priest");
+                createClassGrid("Mage", "", mageGridView, "#a86e8", "#c9daf8", "Mage");
+                createClassGrid("Warlock", "Shadow", warlockGridView, "#674ea7", "#b4a7d6", "Warlock");
+            }
+            
         }
 
         public void submitZGInfo(string playerName, string idolRecieved)
@@ -65,78 +84,158 @@ namespace WebApplication5
             submitZGInfo(comboPlayer20.SelectedValue, CheckBoxList20.SelectedValue);
         }
 
-        protected void buttonZGInfo_Click(object sender, EventArgs e)
+        public void createClassGrid(string playerClass, string playerSubClass, GridView GridViewName, string hexColorInfoRows, string hexColorHeaderRows, string playerGroupHeaderText)
         {
-            string getZGInfoQuery = "select PlayerName, NumAttended, NumIdols from ZulGurub where PlayerName = @PlayerName";
+            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+            connection.Open();
+            SqlCommand command = connection.CreateCommand();
+
+            command.CommandType = CommandType.Text;
+            if (playerClass.Equals("Warlock") && playerSubClass.Equals("Shadow"))
+            {
+                command.CommandText = "SELECT PlayerName from Roster where PlayerClass = @PlayerClass or SubClass = @SubClass";
+            }
+            else
+            {
+                command.CommandText = "SELECT PlayerName from Roster where PlayerClass = @PlayerClass and SubClass = @SubClass";
+            }
+            command.Parameters.AddWithValue("@PlayerClass", playerClass);
+            command.Parameters.AddWithValue("@SubClass", playerSubClass);
+
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dtPlayers = new DataTable();
+            da.Fill(dtPlayers);
+
+            DataTable dtInfo = new DataTable();
+            dtInfo.Columns.Add("PlayerName");
+            dtInfo.Columns.Add("NumAttended");
+            dtInfo.Columns.Add("NumIdols");
+
+            foreach (DataRow playerRow in dtPlayers.Rows)
+            {
+                string playerName = playerRow["PlayerName"].ToString();
+
+                DataTable dtSinglePlayer = getPlayerInfo(playerName);
+                DataRow dr = dtInfo.NewRow();
+                foreach (DataRow singlePlayerRow in dtSinglePlayer.Rows)
+                {
+                    dtInfo.Rows.Add(new Object[]
+                    {
+                        singlePlayerRow["PlayerName"].ToString(),
+                        singlePlayerRow["NumAttended"].ToString(),
+                        singlePlayerRow["NumIdols"].ToString()
+                    });
+                }
+            }
+
+            if (GridViewName.Rows.Count < 10)
+            {
+                int rowsToAdd = 10 - dtInfo.Rows.Count;
+                int x = 5;
+                for (int i = 0; i < rowsToAdd; i++)
+                {
+                    dtInfo.Rows.Add(new Object[]
+                    {
+                        "",
+                        "0",
+                        "0"
+                    });
+                }
+            }
+
+            GridViewName.DataSource = dtInfo;
+            GridViewName.DataBind();
+
+            // Head Rows
+            Color headerRowClassColor = ColorTranslator.FromHtml(hexColorInfoRows);
+            GridViewName.HeaderRow.BackColor = headerRowClassColor;
+
+            // Rest of Rows Colors
+            Color infoRowsClassColor = ColorTranslator.FromHtml(hexColorHeaderRows);
+            GridViewName.RowStyle.BackColor = infoRowsClassColor;
+
+
+
+            connection.Close();
+        }
+
+        public DataTable getPlayerInfo(string playerName) // This method assumes we've already broken players down into classes/subclasses
+        {
+            DataTable dt = new DataTable();
 
             string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
             SqlConnection connection = new SqlConnection(connectionString);
-
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = getZGInfoQuery;
-            command.Parameters.AddWithValue("PlayerName", comboInfoPlayer.SelectedValue);
-            da.SelectCommand = command;
-            DataTable dt = new DataTable();
-
             connection.Open();
+            SqlCommand command = connection.CreateCommand();
+
+            command.CommandType = CommandType.Text; // TODO - Change DISTINCT statement to 8 raids during beginning / 16 raids once BWL starts
+            command.CommandText = @"SELECT PlayerName, NumAttended, NumIdols from ZulGurub where PlayerName = @PlayerName";
+
+            command.Parameters.AddWithValue("PlayerName", playerName);
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dtPlayers = new DataTable();
             da.Fill(dt);
-            connection.Close();
 
-            foreach (DataRow zgInfo in dt.Rows)
-            {
-                string player = zgInfo["PlayerName"].ToString();
-                string numAttended = zgInfo["NumAttended"].ToString();
-                string numIdols = zgInfo["NumIdols"].ToString();
-
-                labelPlayerInfo.InnerText = player + " - ZGs Attended: " + numAttended + " - Number of Idols: " + numIdols;
-            }
-
-            labelPlayerInfo.Visible = true;
-
-            
+            return dt;
         }
 
-        //public void generatePlayerListAndCheckBoxes()
-        //{
-        //    string getRosterQuery = "select PlayerName from Roster where IsActive = 1 and PlayerName <> 'DE' order by PlayerName";
+        private void setGridWidth(GridViewRowEventArgs e)
+        {
+            if (e.Row.RowType == DataControlRowType.DataRow)
+            {
+                for (int i = 0; i < e.Row.Cells.Count; i++)
+                {
+                    e.Row.Cells[i].Width = 100;
+                }
+            }
+        }
 
-        //    string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
-        //    SqlConnection connection = new SqlConnection(connectionString);
+        protected void dpsWarriorGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
 
-        //    SqlDataAdapter da = new SqlDataAdapter();
-        //    SqlCommand command = connection.CreateCommand();
-        //    command.CommandText = getRosterQuery;
-        //    da.SelectCommand = command;
-        //    DataTable dt = new DataTable();
+        protected void tankWarriorGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
 
-        //    connection.Open();
-        //    da.Fill(dt);
-        //    connection.Close();
+            setGridWidth(e);
+        }
 
-        //    foreach (DataRow playerName in dt.Rows)
-        //    {
-        //        string player = playerName["PlayerName"].ToString();
-        //        //labelHasOnyBag.Text = labelHasOnyBag.Text + itemName + ", ";
+        protected void rogueGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
 
-        //        Label dynamicLabel = new Label();
-        //        dynamicLabel.Text = player;
-        //        dynamicLabel.ID = "label" + player;
+        protected void hunterGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
 
-        //        CheckBoxList dynamicCheckBoxList = new CheckBoxList();
-        //        dynamicCheckBoxList.RepeatDirection = System.Web.UI.WebControls.RepeatDirection.Horizontal;
-        //        dynamicCheckBoxList.Items.Add(new ListItem("Attended"));
-        //        dynamicCheckBoxList.Items.Add(new ListItem("Recieved Idol"));
-        //        dynamicCheckBoxList.ID = "checkBoxList" + player;
+        protected void druidGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
 
-        //        Literal dynamicLiteral = new Literal();
-        //        dynamicLiteral.Text = "</br>";
+        protected void paladinGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
 
-        //        divPlayerList.Controls.Add(dynamicLabel);
-        //        divPlayerList.Controls.Add(dynamicCheckBoxList);
-        //        divPlayerList.Controls.Add(dynamicLiteral);
-        //    }
-        //}
+        protected void priestGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
+
+        protected void mageGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
+
+        protected void warlockGridView_RowDataBound(object sender, GridViewRowEventArgs e)
+        {
+            setGridWidth(e);
+        }
 
 
     }

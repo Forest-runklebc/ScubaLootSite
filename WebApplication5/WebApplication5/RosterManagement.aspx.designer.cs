@@ -22,139 +22,139 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.SqlDataSource Roster;
         
         /// <summary>
-        /// ComboBox1 control.
+        /// comboNewPlayer1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox1;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayer1;
         
         /// <summary>
-        /// ComboBox2 control.
+        /// comboNewPlayerRank1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox2;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerRank1;
         
         /// <summary>
-        /// ComboBox3 control.
+        /// comboNewPlayerClass1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox3;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerClass1;
         
         /// <summary>
-        /// ComboBox4 control.
+        /// comboNewPlayerSubClass1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox4;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerSubClass1;
         
         /// <summary>
-        /// RadioButtonList1 control.
+        /// radioNewActive1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList1;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioNewActive1;
         
         /// <summary>
-        /// ComboBox5 control.
+        /// comboNewPlayer2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox5;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayer2;
         
         /// <summary>
-        /// ComboBox6 control.
+        /// comboNewPlayerRank2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox6;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerRank2;
         
         /// <summary>
-        /// ComboBox7 control.
+        /// comboNewPlayerClass2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox7;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerClass2;
         
         /// <summary>
-        /// ComboBox8 control.
+        /// comboNewPlayerSubClass2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox8;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerSubClass2;
         
         /// <summary>
-        /// RadioButtonList2 control.
+        /// radioNewActive2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList2;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioNewActive2;
         
         /// <summary>
-        /// ComboBox9 control.
+        /// comboNewPlayer3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox9;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayer3;
         
         /// <summary>
-        /// ComboBox10 control.
+        /// comboNewPlayerRank3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox10;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerRank3;
         
         /// <summary>
-        /// ComboBox11 control.
+        /// comboNewPlayerClass3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox11;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerClass3;
         
         /// <summary>
-        /// ComboBox12 control.
+        /// comboNewPlayerSubClass3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox ComboBox12;
+        protected global::AjaxControlToolkit.ComboBox comboNewPlayerSubClass3;
         
         /// <summary>
-        /// RadioButtonList3 control.
+        /// radioNewActive3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList RadioButtonList3;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioNewActive3;
         
         /// <summary>
         /// buttonAddNewPlayers control.
@@ -166,139 +166,139 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.Button buttonAddNewPlayers;
         
         /// <summary>
-        /// comboPlayer1 control.
+        /// comboUpdatePlayer1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayer1;
+        protected global::AjaxControlToolkit.ComboBox comboUpdatePlayer1;
         
         /// <summary>
-        /// comboRanks1 control.
+        /// comboUpdateRanks1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboRanks1;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateRanks1;
         
         /// <summary>
-        /// comboPlayerClass control.
+        /// comboUpdateClass1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayerClass;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateClass1;
         
         /// <summary>
-        /// comboPlayerSubClass control.
+        /// comboUpdateSubClass1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayerSubClass;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateSubClass1;
         
         /// <summary>
-        /// radioIsActive1 control.
+        /// radioUpdateActive1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList radioIsActive1;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioUpdateActive1;
         
         /// <summary>
-        /// comboPlayer2 control.
+        /// comboUpdatePlayer2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayer2;
+        protected global::AjaxControlToolkit.ComboBox comboUpdatePlayer2;
         
         /// <summary>
-        /// comboRanks2 control.
+        /// comboUpdateRanks2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboRanks2;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateRanks2;
         
         /// <summary>
-        /// comboPlayerClass2 control.
+        /// comboUpdateClass2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayerClass2;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateClass2;
         
         /// <summary>
-        /// comboPlayerSubClas2 control.
+        /// comboUpdateSubClass2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayerSubClas2;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateSubClass2;
         
         /// <summary>
-        /// radioIsActive2 control.
+        /// radioUpdateActive2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList radioIsActive2;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioUpdateActive2;
         
         /// <summary>
-        /// comboPlayer3 control.
+        /// comboUpdatePlayer3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayer3;
+        protected global::AjaxControlToolkit.ComboBox comboUpdatePlayer3;
         
         /// <summary>
-        /// comboRanks3 control.
+        /// comboUpdateRanks3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboRanks3;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateRanks3;
         
         /// <summary>
-        /// comboPlayerClass3 control.
+        /// comboUpdateClass3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayerClass3;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateClass3;
         
         /// <summary>
-        /// comboPlayerSubClas3 control.
+        /// comboUpdateSubClass3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::AjaxControlToolkit.ComboBox comboPlayerSubClas3;
+        protected global::AjaxControlToolkit.ComboBox comboUpdateSubClass3;
         
         /// <summary>
-        /// radioIsActive3 control.
+        /// radioUpdateActive3 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.RadioButtonList radioIsActive3;
+        protected global::System.Web.UI.WebControls.RadioButtonList radioUpdateActive3;
         
         /// <summary>
         /// buttonUpdateExistingPlayers control.
