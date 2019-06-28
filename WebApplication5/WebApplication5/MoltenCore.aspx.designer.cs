@@ -166,6 +166,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioLucifron1;
         
         /// <summary>
+        /// checkboxLucifron1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxLucifron1;
+        
+        /// <summary>
         /// comboLucifronLoot2 control.
         /// </summary>
         /// <remarks>
@@ -191,6 +200,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioLucifron2;
+        
+        /// <summary>
+        /// checkboxLucifron2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxLucifron2;
         
         /// <summary>
         /// comboMagmadarLoot1 control.
@@ -220,6 +238,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioMagmadar1;
         
         /// <summary>
+        /// checkboxMagmadar1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxMagmadar1;
+        
+        /// <summary>
         /// comboMagmadarLoot2 control.
         /// </summary>
         /// <remarks>
@@ -245,6 +272,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioMagmadar2;
+        
+        /// <summary>
+        /// checkboxMagmadar2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxMagmadar2;
         
         /// <summary>
         /// comboMagmadarLoot3 control.
@@ -274,6 +310,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioMagmadar3;
         
         /// <summary>
+        /// checkboxMagmadar3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxMagmadar3;
+        
+        /// <summary>
         /// comboGehennasLoot1 control.
         /// </summary>
         /// <remarks>
@@ -299,6 +344,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioGehennas1;
+        
+        /// <summary>
+        /// checkboxGehennas1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGehennas1;
         
         /// <summary>
         /// comboGehennasLoot2 control.
@@ -328,6 +382,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioGehennas2;
         
         /// <summary>
+        /// checkboxGehennas2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGehennas2;
+        
+        /// <summary>
         /// comboGarrLoot1 control.
         /// </summary>
         /// <remarks>
@@ -353,6 +416,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioGarr1;
+        
+        /// <summary>
+        /// checkboxGarr1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGarr1;
         
         /// <summary>
         /// comboGarrLoot2 control.
@@ -382,6 +454,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioGarr2;
         
         /// <summary>
+        /// checkboxGarr2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGarr2;
+        
+        /// <summary>
         /// comboGarrLoot3 control.
         /// </summary>
         /// <remarks>
@@ -407,6 +488,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioGarr3;
+        
+        /// <summary>
+        /// checkboxGarr3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGarr3;
         
         /// <summary>
         /// comboGarrLoot4 control.
@@ -436,6 +526,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioGarr4;
         
         /// <summary>
+        /// checkboxGarr4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGarr4;
+        
+        /// <summary>
         /// comboBaronLoot1 control.
         /// </summary>
         /// <remarks>
@@ -461,6 +560,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioBaron1;
+        
+        /// <summary>
+        /// checkboxBaron1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxBaron1;
         
         /// <summary>
         /// comboBaronLoot2 control.
@@ -490,6 +598,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioBaron2;
         
         /// <summary>
+        /// checkboxBaron2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxBaron2;
+        
+        /// <summary>
         /// comboBaronLoot3 control.
         /// </summary>
         /// <remarks>
@@ -515,6 +632,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioBaron3;
+        
+        /// <summary>
+        /// checkboxBaron3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxBaron3;
         
         /// <summary>
         /// comboShazzrahLoot1 control.
@@ -544,6 +670,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioShazzrah1;
         
         /// <summary>
+        /// checkboxShazzrah1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxShazzrah1;
+        
+        /// <summary>
         /// comboShazzrahLoot2 control.
         /// </summary>
         /// <remarks>
@@ -569,6 +704,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioShazzrah2;
+        
+        /// <summary>
+        /// checkboxShazzrah2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxShazzrah2;
         
         /// <summary>
         /// comboSulfuronLoot1 control.
@@ -598,6 +742,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioSulfuron1;
         
         /// <summary>
+        /// checkboxSulfuron1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxSulfuron1;
+        
+        /// <summary>
         /// comboSulfuronLoot2 control.
         /// </summary>
         /// <remarks>
@@ -623,6 +776,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioSulfuron2;
+        
+        /// <summary>
+        /// checkboxSulfuron2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxSulfuron2;
         
         /// <summary>
         /// comboGolemaggLoot1 control.
@@ -652,6 +814,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioGolemagg1;
         
         /// <summary>
+        /// checkboxGolemagg1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGolemagg1;
+        
+        /// <summary>
         /// comboGolemaggLoot2 control.
         /// </summary>
         /// <remarks>
@@ -677,6 +848,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioGolemagg2;
+        
+        /// <summary>
+        /// checkboxGolemagg2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGolemagg2;
         
         /// <summary>
         /// comboGolemaggLoot3 control.
@@ -706,6 +886,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioGolemagg3;
         
         /// <summary>
+        /// checkboxGolemagg3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxGolemagg3;
+        
+        /// <summary>
         /// comboMajordomoLoot1 control.
         /// </summary>
         /// <remarks>
@@ -731,6 +920,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioMajordomo1;
+        
+        /// <summary>
+        /// checkboxMajordomo1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxMajordomo1;
         
         /// <summary>
         /// comboMajordomoLoot2 control.
@@ -760,6 +958,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioMajordomo2;
         
         /// <summary>
+        /// checkboxMajordomo2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxMajordomo2;
+        
+        /// <summary>
         /// comboMajordomoLoot3 control.
         /// </summary>
         /// <remarks>
@@ -785,6 +992,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioMajordomo3;
+        
+        /// <summary>
+        /// checkboxMajordomo3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxMajordomo3;
         
         /// <summary>
         /// comboRagnarosLoot1 control.
@@ -814,6 +1030,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioRagnaros1;
         
         /// <summary>
+        /// checkboxRagnaros1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxRagnaros1;
+        
+        /// <summary>
         /// comboRagnarosLoot2 control.
         /// </summary>
         /// <remarks>
@@ -839,6 +1064,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioRagnaros2;
+        
+        /// <summary>
+        /// checkboxRagnaros2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxRagnaros2;
         
         /// <summary>
         /// comboRagnarosLoot3 control.
@@ -868,6 +1102,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioRagnaros3;
         
         /// <summary>
+        /// checkboxRagnaros3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxRagnaros3;
+        
+        /// <summary>
         /// comboRagnarosLoot4 control.
         /// </summary>
         /// <remarks>
@@ -893,6 +1136,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioRagnaros4;
+        
+        /// <summary>
+        /// checkboxRagnaros4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxRagnaros4;
         
         /// <summary>
         /// comboRagnarosLoot5 control.
@@ -922,6 +1174,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioRagnaros5;
         
         /// <summary>
+        /// checkboxRagnaros5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxRagnaros5;
+        
+        /// <summary>
         /// comboTrashLoot1 control.
         /// </summary>
         /// <remarks>
@@ -947,6 +1208,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash1;
+        
+        /// <summary>
+        /// checkboxTrash1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash1;
         
         /// <summary>
         /// comboTrashLoot2 control.
@@ -976,6 +1246,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash2;
         
         /// <summary>
+        /// checkboxTrash2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash2;
+        
+        /// <summary>
         /// comboTrashLoot3 control.
         /// </summary>
         /// <remarks>
@@ -1001,6 +1280,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash3;
+        
+        /// <summary>
+        /// checkboxTrash3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash3;
         
         /// <summary>
         /// comboTrashLoot4 control.
@@ -1030,6 +1318,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash4;
         
         /// <summary>
+        /// checkboxTrash4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash4;
+        
+        /// <summary>
         /// comboTrashLoot5 control.
         /// </summary>
         /// <remarks>
@@ -1055,6 +1352,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash5;
+        
+        /// <summary>
+        /// checkboxTrash5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash5;
         
         /// <summary>
         /// comboTrashLoot6 control.
@@ -1084,6 +1390,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash6;
         
         /// <summary>
+        /// checkboxTrash6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash6;
+        
+        /// <summary>
         /// comboTrashLoot7 control.
         /// </summary>
         /// <remarks>
@@ -1109,6 +1424,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash7;
+        
+        /// <summary>
+        /// checkboxTrash7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash7;
         
         /// <summary>
         /// comboTrashLoot8 control.
@@ -1138,6 +1462,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash8;
         
         /// <summary>
+        /// checkboxTrash8 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash8;
+        
+        /// <summary>
         /// comboTrashLoot9 control.
         /// </summary>
         /// <remarks>
@@ -1165,6 +1498,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash9;
         
         /// <summary>
+        /// checkboxTrash9 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash9;
+        
+        /// <summary>
         /// comboTrashLoot10 control.
         /// </summary>
         /// <remarks>
@@ -1190,6 +1532,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioTrash10;
+        
+        /// <summary>
+        /// checkboxTrash10 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxTrash10;
         
         /// <summary>
         /// WriteToDatabase control.

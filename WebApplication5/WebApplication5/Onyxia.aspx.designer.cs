@@ -85,6 +85,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioOnyxia1;
         
         /// <summary>
+        /// checkboxOnyxia1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxOnyxia1;
+        
+        /// <summary>
         /// comboOnyxiaLoot2 control.
         /// </summary>
         /// <remarks>
@@ -110,6 +119,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioOnyxia2;
+        
+        /// <summary>
+        /// checkboxOnyxia2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxOnyxia2;
         
         /// <summary>
         /// comboOnyxiaLoot3 control.
@@ -139,6 +157,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioOnyxia3;
         
         /// <summary>
+        /// checkboxOnyxia3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxOnyxia3;
+        
+        /// <summary>
         /// comboOnyxiaLoot4 control.
         /// </summary>
         /// <remarks>
@@ -164,6 +191,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioOnyxia4;
+        
+        /// <summary>
+        /// checkboxOnyxia4 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxOnyxia4;
         
         /// <summary>
         /// comboOnyxiaLoot5 control.
@@ -193,6 +229,15 @@ namespace WebApplication5 {
         protected global::System.Web.UI.WebControls.RadioButtonList radioOnyxia5;
         
         /// <summary>
+        /// checkboxOnyxia5 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxOnyxia5;
+        
+        /// <summary>
         /// comboOnyxiaLoot6 control.
         /// </summary>
         /// <remarks>
@@ -218,6 +263,15 @@ namespace WebApplication5 {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RadioButtonList radioOnyxia6;
+        
+        /// <summary>
+        /// checkboxOnyxia6 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox checkboxOnyxia6;
         
         /// <summary>
         /// WriteToDatabase control.

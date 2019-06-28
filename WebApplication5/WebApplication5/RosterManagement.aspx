@@ -106,7 +106,7 @@
     <br /><br /><br /><br />
     <p><b>Update Existing Player(s)</b></p>
     <p>Player&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Rank&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Class&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Subclass(Warriors/Priests)</p>
-    <ajaxToolkit:ComboBox ID="comboUpdatePlayer1" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdatePlayer1" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" DropDownStyle="DropDownList" OnTextChanged="comboUpdatePlayer1_TextChanged" AutoPostBack="true">
     </ajaxToolkit:ComboBox>
     <ajaxToolkit:ComboBox ID="comboUpdateRanks1" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
@@ -134,7 +134,7 @@
     </asp:RadioButtonList>
 
     <br />
-    <ajaxToolkit:ComboBox ID="comboUpdatePlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdatePlayer2" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;"  DropDownStyle="DropDownList" OnTextChanged="comboUpdatePlayer2_TextChanged" AutoPostBack="true">
     </ajaxToolkit:ComboBox>
     <ajaxToolkit:ComboBox ID="comboUpdateRanks2" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>
@@ -162,7 +162,7 @@
     </asp:RadioButtonList>
 
         <br />
-    <ajaxToolkit:ComboBox ID="comboUpdatePlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;">
+    <ajaxToolkit:ComboBox ID="comboUpdatePlayer3" runat="server" AutoCompleteMode="SuggestAppend" DataSourceID="Roster" DataTextField="PlayerName" DataValueField="PlayerName" MaxLength="0" style="display: inline;" DropDownStyle="DropDownList" OnTextChanged="comboUpdatePlayer3_TextChanged" AutoPostBack="true">
     </ajaxToolkit:ComboBox>
     <ajaxToolkit:ComboBox ID="comboUpdateRanks3" runat="server" AutoCompleteMode="SuggestAppend" MaxLength="0" style="display: inline;">
         <asp:ListItem>Officer</asp:ListItem>

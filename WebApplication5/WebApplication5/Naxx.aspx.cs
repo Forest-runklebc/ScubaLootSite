@@ -30,84 +30,84 @@ namespace WebApplication5
         {
             string dateOfRaid = calendarNaxx.SelectedDate.ToString("yyyy-MM-dd");
 
-            Utility.InsertPlayerlootQuery(comboAnubPlayer1.SelectedValue, comboAnubLoot1.SelectedValue, radioAnub1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboAnubPlayer2.SelectedValue, comboAnubLoot2.SelectedValue, radioAnub2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboAnubPlayer3.SelectedValue, comboAnubLoot3.SelectedValue, radioAnub3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboAnubPlayer1.SelectedValue, comboAnubLoot1.SelectedValue, radioAnub1.SelectedValue, dateOfRaid, checkboxAnub1.Checked);
+            Utility.InsertPlayerlootQuery(comboAnubPlayer2.SelectedValue, comboAnubLoot2.SelectedValue, radioAnub2.SelectedValue, dateOfRaid, checkboxAnub2.Checked);
+            Utility.InsertPlayerlootQuery(comboAnubPlayer3.SelectedValue, comboAnubLoot3.SelectedValue, radioAnub3.SelectedValue, dateOfRaid, checkboxAnub3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboFaerlinaPlayer1.SelectedValue, comboFaerlinaLoot1.SelectedValue, radioFaerlina1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboFaerlinaPlayer2.SelectedValue, comboFaerlinaLoot2.SelectedValue, radioFaerlina2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboFaerlinaPlayer3.SelectedValue, comboFaerlinaLoot3.SelectedValue, radioFaerlina3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboFaerlinaPlayer1.SelectedValue, comboFaerlinaLoot1.SelectedValue, radioFaerlina1.SelectedValue, dateOfRaid, checkboxFaerlina1.Checked);
+            Utility.InsertPlayerlootQuery(comboFaerlinaPlayer2.SelectedValue, comboFaerlinaLoot2.SelectedValue, radioFaerlina2.SelectedValue, dateOfRaid, checkboxFaerlina2.Checked);
+            Utility.InsertPlayerlootQuery(comboFaerlinaPlayer3.SelectedValue, comboFaerlinaLoot3.SelectedValue, radioFaerlina3.SelectedValue, dateOfRaid, checkboxFaerlina3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer1.SelectedValue, comboMaexxnaLoot1.SelectedValue, radioMaexxna1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer2.SelectedValue, comboMaexxnaLoot2.SelectedValue, radioMaexxna2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer3.SelectedValue, comboMaexxnaLoot3.SelectedValue, radioMaexxna3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer4.SelectedValue, comboMaexxnaLoot4.SelectedValue, radioMaexxna4.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer1.SelectedValue, comboMaexxnaLoot1.SelectedValue, radioMaexxna1.SelectedValue, dateOfRaid, checkboxMaexxna1.Checked);
+            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer2.SelectedValue, comboMaexxnaLoot2.SelectedValue, radioMaexxna2.SelectedValue, dateOfRaid, checkboxMaexxna2.Checked);
+            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer3.SelectedValue, comboMaexxnaLoot3.SelectedValue, radioMaexxna3.SelectedValue, dateOfRaid, checkboxMaexxna3.Checked);
+            Utility.InsertPlayerlootQuery(comboMaexxnaPlayer4.SelectedValue, comboMaexxnaLoot4.SelectedValue, radioMaexxna4.SelectedValue, dateOfRaid, checkboxMaexxna4.Checked);
 
-            Utility.InsertPlayerlootQuery(comboNothPlayer1.SelectedValue, comboNothLoot1.SelectedValue, radioNoth1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboNothPlayer2.SelectedValue, comboNothLoot2.SelectedValue, radioNoth2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboNothPlayer3.SelectedValue, comboNothLoot3.SelectedValue, radioNoth3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboNothPlayer1.SelectedValue, comboNothLoot1.SelectedValue, radioNoth1.SelectedValue, dateOfRaid, checkboxNoth1.Checked);
+            Utility.InsertPlayerlootQuery(comboNothPlayer2.SelectedValue, comboNothLoot2.SelectedValue, radioNoth2.SelectedValue, dateOfRaid, checkboxNoth2.Checked);
+            Utility.InsertPlayerlootQuery(comboNothPlayer3.SelectedValue, comboNothLoot3.SelectedValue, radioNoth3.SelectedValue, dateOfRaid, checkboxNoth3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboHeiganPlayer1.SelectedValue, comboHeiganLoot1.SelectedValue, radioHeigan1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboHeiganPlayer2.SelectedValue, comboHeiganLoot2.SelectedValue, radioHeigan2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboHeiganPlayer3.SelectedValue, comboHeiganLoot3.SelectedValue, radioHeigan3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboHeiganPlayer1.SelectedValue, comboHeiganLoot1.SelectedValue, radioHeigan1.SelectedValue, dateOfRaid, checkboxHeigan1.Checked);
+            Utility.InsertPlayerlootQuery(comboHeiganPlayer2.SelectedValue, comboHeiganLoot2.SelectedValue, radioHeigan2.SelectedValue, dateOfRaid, checkboxHeigan2.Checked);
+            Utility.InsertPlayerlootQuery(comboHeiganPlayer3.SelectedValue, comboHeiganLoot3.SelectedValue, radioHeigan3.SelectedValue, dateOfRaid, checkboxHeigan3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboLoathebPlayer1.SelectedValue, comboLoathebLoot1.SelectedValue, radioLoatheb1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboLoathebPlayer2.SelectedValue, comboLoathebLoot2.SelectedValue, radioLoatheb2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboLoathebPlayer3.SelectedValue, comboLoathebLoot3.SelectedValue, radioLoatheb3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboLoathebPlayer4.SelectedValue, comboLoathebLoot4.SelectedValue, radioLoatheb4.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboLoathebPlayer1.SelectedValue, comboLoathebLoot1.SelectedValue, radioLoatheb1.SelectedValue, dateOfRaid, checkboxLoatheb1.Checked);
+            Utility.InsertPlayerlootQuery(comboLoathebPlayer2.SelectedValue, comboLoathebLoot2.SelectedValue, radioLoatheb2.SelectedValue, dateOfRaid, checkboxLoatheb2.Checked);
+            Utility.InsertPlayerlootQuery(comboLoathebPlayer3.SelectedValue, comboLoathebLoot3.SelectedValue, radioLoatheb3.SelectedValue, dateOfRaid, checkboxLoatheb3.Checked);
+            Utility.InsertPlayerlootQuery(comboLoathebPlayer4.SelectedValue, comboLoathebLoot4.SelectedValue, radioLoatheb4.SelectedValue, dateOfRaid, checkboxLoatheb4.Checked);
 
-            Utility.InsertPlayerlootQuery(comboPatchwerkPlayer1.SelectedValue, comboPatchwerkLoot1.SelectedValue, radioPatchwerk1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboPatchwerkPlayer2.SelectedValue, comboPatchwerkLoot2.SelectedValue, radioPatchwerk2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboPatchwerkPlayer3.SelectedValue, comboPatchwerkLoot3.SelectedValue, radioPatchwerk3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboPatchwerkPlayer1.SelectedValue, comboPatchwerkLoot1.SelectedValue, radioPatchwerk1.SelectedValue, dateOfRaid, checkboxPatchwerk1.Checked);
+            Utility.InsertPlayerlootQuery(comboPatchwerkPlayer2.SelectedValue, comboPatchwerkLoot2.SelectedValue, radioPatchwerk2.SelectedValue, dateOfRaid, checkboxPatchwerk2.Checked);
+            Utility.InsertPlayerlootQuery(comboPatchwerkPlayer3.SelectedValue, comboPatchwerkLoot3.SelectedValue, radioPatchwerk3.SelectedValue, dateOfRaid, checkboxPatchwerk3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboGrobbulusPlayer1.SelectedValue, comboGrobbulusLoot1.SelectedValue, radioGrobbulus1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboGrobbulusPlayer2.SelectedValue, comboGrobbulusLoot2.SelectedValue, radioGrobbulus2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboGrobbulusPlayer3.SelectedValue, comboGrobbulusLoot3.SelectedValue, radioGrobbulus3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboGrobbulusPlayer1.SelectedValue, comboGrobbulusLoot1.SelectedValue, radioGrobbulus1.SelectedValue, dateOfRaid, checkboxGrobbulus1.Checked);
+            Utility.InsertPlayerlootQuery(comboGrobbulusPlayer2.SelectedValue, comboGrobbulusLoot2.SelectedValue, radioGrobbulus2.SelectedValue, dateOfRaid, checkboxGrobbulus2.Checked);
+            Utility.InsertPlayerlootQuery(comboGrobbulusPlayer3.SelectedValue, comboGrobbulusLoot3.SelectedValue, radioGrobbulus3.SelectedValue, dateOfRaid, checkboxGrobbulus3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboGluthPlayer1.SelectedValue, comboGluthLoot1.SelectedValue, radioGluth1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboGluthPlayer2.SelectedValue, comboGluthLoot2.SelectedValue, radioGluth2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboGluthPlayer3.SelectedValue, comboGluthLoot3.SelectedValue, radioGluth3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboGluthPlayer1.SelectedValue, comboGluthLoot1.SelectedValue, radioGluth1.SelectedValue, dateOfRaid, checkboxGluth1.Checked);
+            Utility.InsertPlayerlootQuery(comboGluthPlayer2.SelectedValue, comboGluthLoot2.SelectedValue, radioGluth2.SelectedValue, dateOfRaid, checkboxGluth2.Checked);
+            Utility.InsertPlayerlootQuery(comboGluthPlayer3.SelectedValue, comboGluthLoot3.SelectedValue, radioGluth3.SelectedValue, dateOfRaid, checkboxGluth3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboThaddiusPlayer1.SelectedValue, comboThaddiusLoot1.SelectedValue, radioThaddius1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboThaddiusPlayer2.SelectedValue, comboThaddiusLoot2.SelectedValue, radioThaddius2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboThaddiusPlayer3.SelectedValue, comboThaddiusLoot3.SelectedValue, radioThaddius3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboThaddiusPlayer4.SelectedValue, comboThaddiusLoot4.SelectedValue, radioThaddius4.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboThaddiusPlayer1.SelectedValue, comboThaddiusLoot1.SelectedValue, radioThaddius1.SelectedValue, dateOfRaid, checkboxThaddius1.Checked);
+            Utility.InsertPlayerlootQuery(comboThaddiusPlayer2.SelectedValue, comboThaddiusLoot2.SelectedValue, radioThaddius2.SelectedValue, dateOfRaid, checkboxThaddius2.Checked);
+            Utility.InsertPlayerlootQuery(comboThaddiusPlayer3.SelectedValue, comboThaddiusLoot3.SelectedValue, radioThaddius3.SelectedValue, dateOfRaid, checkboxThaddius3.Checked);
+            Utility.InsertPlayerlootQuery(comboThaddiusPlayer4.SelectedValue, comboThaddiusLoot4.SelectedValue, radioThaddius4.SelectedValue, dateOfRaid, checkboxThaddius4.Checked);
 
-            Utility.InsertPlayerlootQuery(comboRazuviousPlayer1.SelectedValue, comboRazuviousLoot1.SelectedValue, radioRazuvious1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboRazuviousPlayer2.SelectedValue, comboRazuviousLoot2.SelectedValue, radioRazuvious2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboRazuviousPlayer3.SelectedValue, comboRazuviousLoot3.SelectedValue, radioRazuvious3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboRazuviousPlayer1.SelectedValue, comboRazuviousLoot1.SelectedValue, radioRazuvious1.SelectedValue, dateOfRaid, checkboxRazuvious1.Checked);
+            Utility.InsertPlayerlootQuery(comboRazuviousPlayer2.SelectedValue, comboRazuviousLoot2.SelectedValue, radioRazuvious2.SelectedValue, dateOfRaid, checkboxRazuvious2.Checked);
+            Utility.InsertPlayerlootQuery(comboRazuviousPlayer3.SelectedValue, comboRazuviousLoot3.SelectedValue, radioRazuvious3.SelectedValue, dateOfRaid, checkboxRazuvious3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboGothikPlayer1.SelectedValue, comboGothikLoot1.SelectedValue, radioGothik1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboGothikPlayer2.SelectedValue, comboGothikLoot2.SelectedValue, radioGothik2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboGothikPlayer3.SelectedValue, comboGothikLoot3.SelectedValue, radioGothik3.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboGothikPlayer1.SelectedValue, comboGothikLoot1.SelectedValue, radioGothik1.SelectedValue, dateOfRaid, checkboxGothik1.Checked);
+            Utility.InsertPlayerlootQuery(comboGothikPlayer2.SelectedValue, comboGothikLoot2.SelectedValue, radioGothik2.SelectedValue, dateOfRaid, checkboxGothik2.Checked);
+            Utility.InsertPlayerlootQuery(comboGothikPlayer3.SelectedValue, comboGothikLoot3.SelectedValue, radioGothik3.SelectedValue, dateOfRaid, checkboxGothik3.Checked);
 
-            Utility.InsertPlayerlootQuery(comboHorsePlayer1.SelectedValue, comboHorseLoot1.SelectedValue, radioHorse1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboHorsePlayer2.SelectedValue, comboHorseLoot2.SelectedValue, radioHorse2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboHorsePlayer3.SelectedValue, comboHorseLoot3.SelectedValue, radioHorse3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboHorsePlayer4.SelectedValue, comboHorseLoot4.SelectedValue, radioHorse4.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboHorsePlayer1.SelectedValue, comboHorseLoot1.SelectedValue, radioHorse1.SelectedValue, dateOfRaid, checkboxHorse1.Checked);
+            Utility.InsertPlayerlootQuery(comboHorsePlayer2.SelectedValue, comboHorseLoot2.SelectedValue, radioHorse2.SelectedValue, dateOfRaid, checkboxHorse2.Checked);
+            Utility.InsertPlayerlootQuery(comboHorsePlayer3.SelectedValue, comboHorseLoot3.SelectedValue, radioHorse3.SelectedValue, dateOfRaid, checkboxHorse3.Checked);
+            Utility.InsertPlayerlootQuery(comboHorsePlayer4.SelectedValue, comboHorseLoot4.SelectedValue, radioHorse4.SelectedValue, dateOfRaid, checkboxHorse4.Checked);
 
-            Utility.InsertPlayerlootQuery(comboSapphironPlayer1.SelectedValue, comboSapphironLoot1.SelectedValue, radioSapphiron1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboSapphironPlayer2.SelectedValue, comboSapphironLoot2.SelectedValue, radioSapphiron2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboSapphironPlayer3.SelectedValue, comboSapphironLoot3.SelectedValue, radioSapphiron3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboSapphironPlayer4.SelectedValue, comboSapphironLoot4.SelectedValue, radioSapphiron4.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboSapphironPlayer5.SelectedValue, comboSapphironLoot5.SelectedValue, radioSapphiron5.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboSapphironPlayer1.SelectedValue, comboSapphironLoot1.SelectedValue, radioSapphiron1.SelectedValue, dateOfRaid, checkboxSapphiron1.Checked);
+            Utility.InsertPlayerlootQuery(comboSapphironPlayer2.SelectedValue, comboSapphironLoot2.SelectedValue, radioSapphiron2.SelectedValue, dateOfRaid, checkboxSapphiron2.Checked);
+            Utility.InsertPlayerlootQuery(comboSapphironPlayer3.SelectedValue, comboSapphironLoot3.SelectedValue, radioSapphiron3.SelectedValue, dateOfRaid, checkboxSapphiron3.Checked);
+            Utility.InsertPlayerlootQuery(comboSapphironPlayer4.SelectedValue, comboSapphironLoot4.SelectedValue, radioSapphiron4.SelectedValue, dateOfRaid, checkboxSapphiron4.Checked);
+            Utility.InsertPlayerlootQuery(comboSapphironPlayer5.SelectedValue, comboSapphironLoot5.SelectedValue, radioSapphiron5.SelectedValue, dateOfRaid, checkboxSapphiron5.Checked);
 
-            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer1.SelectedValue, comboKelThuzadLoot1.SelectedValue, radioKelThuzad1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer2.SelectedValue, comboKelThuzadLoot2.SelectedValue, radioKelThuzad2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer3.SelectedValue, comboKelThuzadLoot3.SelectedValue, radioKelThuzad3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer4.SelectedValue, comboKelThuzadLoot4.SelectedValue, radioKelThuzad4.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer5.SelectedValue, comboKelThuzadLoot5.SelectedValue, radioKelThuzad5.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer1.SelectedValue, comboKelThuzadLoot1.SelectedValue, radioKelThuzad1.SelectedValue, dateOfRaid, checkboxKelThuzad1.Checked);
+            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer2.SelectedValue, comboKelThuzadLoot2.SelectedValue, radioKelThuzad2.SelectedValue, dateOfRaid, checkboxKelThuzad2.Checked);
+            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer3.SelectedValue, comboKelThuzadLoot3.SelectedValue, radioKelThuzad3.SelectedValue, dateOfRaid, checkboxKelThuzad3.Checked);
+            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer4.SelectedValue, comboKelThuzadLoot4.SelectedValue, radioKelThuzad4.SelectedValue, dateOfRaid, checkboxKelThuzad4.Checked);
+            Utility.InsertPlayerlootQuery(comboKelThuzadPlayer5.SelectedValue, comboKelThuzadLoot5.SelectedValue, radioKelThuzad5.SelectedValue, dateOfRaid, checkboxKelThuzad5.Checked);
 
-            Utility.InsertPlayerlootQuery(comboTrashPlayer1.SelectedValue, comboTrashLoot1.SelectedValue, radioTrash1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer2.SelectedValue, comboTrashLoot2.SelectedValue, radioTrash2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer3.SelectedValue, comboTrashLoot3.SelectedValue, radioTrash3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer4.SelectedValue, comboTrashLoot4.SelectedValue, radioTrash4.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer5.SelectedValue, comboTrashLoot5.SelectedValue, radioTrash5.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer6.SelectedValue, comboTrashLoot6.SelectedValue, radioTrash6.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer7.SelectedValue, comboTrashLoot7.SelectedValue, radioTrash7.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer8.SelectedValue, comboTrashLoot8.SelectedValue, radioTrash8.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer9.SelectedValue, comboTrashLoot9.SelectedValue, radioTrash9.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboTrashPlayer10.SelectedValue, comboTrashLoot10.SelectedValue, radioTrash10.SelectedValue, dateOfRaid);
-        }       
+            Utility.InsertPlayerlootQuery(comboTrashPlayer1.SelectedValue, comboTrashLoot1.SelectedValue, radioTrash1.SelectedValue, dateOfRaid, checkboxTrash1.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer2.SelectedValue, comboTrashLoot2.SelectedValue, radioTrash2.SelectedValue, dateOfRaid, checkboxTrash2.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer3.SelectedValue, comboTrashLoot3.SelectedValue, radioTrash3.SelectedValue, dateOfRaid, checkboxTrash3.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer4.SelectedValue, comboTrashLoot4.SelectedValue, radioTrash4.SelectedValue, dateOfRaid, checkboxTrash4.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer5.SelectedValue, comboTrashLoot5.SelectedValue, radioTrash5.SelectedValue, dateOfRaid, checkboxTrash5.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer6.SelectedValue, comboTrashLoot6.SelectedValue, radioTrash6.SelectedValue, dateOfRaid, checkboxTrash6.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer7.SelectedValue, comboTrashLoot7.SelectedValue, radioTrash7.SelectedValue, dateOfRaid, checkboxTrash7.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer8.SelectedValue, comboTrashLoot8.SelectedValue, radioTrash8.SelectedValue, dateOfRaid, checkboxTrash8.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer9.SelectedValue, comboTrashLoot9.SelectedValue, radioTrash9.SelectedValue, dateOfRaid, checkboxTrash9.Checked);
+            Utility.InsertPlayerlootQuery(comboTrashPlayer10.SelectedValue, comboTrashLoot10.SelectedValue, radioTrash10.SelectedValue, dateOfRaid, checkboxTrash10.Checked);
+        }
     }
 }

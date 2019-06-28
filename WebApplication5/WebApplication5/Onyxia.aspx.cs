@@ -62,12 +62,12 @@ namespace WebApplication5
         {
             string dateOfRaid = calendarOnyxia.SelectedDate.ToString("yyyy-MM-dd");
 
-            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer1.SelectedValue, comboOnyxiaLoot1.SelectedValue, radioOnyxia1.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer2.SelectedValue, comboOnyxiaLoot2.SelectedValue, radioOnyxia2.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer3.SelectedValue, comboOnyxiaLoot3.SelectedValue, radioOnyxia3.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer4.SelectedValue, comboOnyxiaLoot4.SelectedValue, radioOnyxia4.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer5.SelectedValue, comboOnyxiaLoot5.SelectedValue, radioOnyxia5.SelectedValue, dateOfRaid);
-            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer6.SelectedValue, comboOnyxiaLoot6.SelectedValue, radioOnyxia6.SelectedValue, dateOfRaid);
+            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer1.SelectedValue, comboOnyxiaLoot1.SelectedValue, radioOnyxia1.SelectedValue, dateOfRaid, checkboxOnyxia1.Checked);
+            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer2.SelectedValue, comboOnyxiaLoot2.SelectedValue, radioOnyxia2.SelectedValue, dateOfRaid, checkboxOnyxia2.Checked);
+            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer3.SelectedValue, comboOnyxiaLoot3.SelectedValue, radioOnyxia3.SelectedValue, dateOfRaid, checkboxOnyxia3.Checked);
+            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer4.SelectedValue, comboOnyxiaLoot4.SelectedValue, radioOnyxia4.SelectedValue, dateOfRaid, checkboxOnyxia4.Checked);
+            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer5.SelectedValue, comboOnyxiaLoot5.SelectedValue, radioOnyxia5.SelectedValue, dateOfRaid, checkboxOnyxia5.Checked);
+            Utility.InsertPlayerlootQuery(comboOnyxiaPlayer6.SelectedValue, comboOnyxiaLoot6.SelectedValue, radioOnyxia6.SelectedValue, dateOfRaid, checkboxOnyxia6.Checked);
         }
     }
 }

@@ -11,7 +11,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Drawing;
 
-/* 
+/*  Class Color Hex Codes
 Attendance Good color = #b7e1cd
 Attendance Bad color = #f4c7c3
 
@@ -164,7 +164,7 @@ namespace WebApplication5
 
             command.CommandType = CommandType.Text; // TODO - Change DISTINCT statement to 8 raids during beginning / 16 raids once BWL starts
             command.CommandText = @"SELECT 
-	                                RecentAttendance.PlayerName, 
+	                                (select PlayerName from Roster where PlayerName = @PlayerName) as PlayerName, 
 	                                (select LootScore from Roster where PlayerName = @PlayerName) as ForeverLootScore, 
 	                                (select sum(AttendanceValue) from Attendance where PlayerName = @PlayerName) as ForeverAttendanceValue,
 	                                SUM(RecentAttendance.AttendanceValue) as RecentAttendanceValue,
@@ -425,8 +425,8 @@ namespace WebApplication5
                         getTier2ItemCommand.CommandText = "select wowheadLink from TierSets where Class = @Class and Tier = 2 and ItemSlot = @ItemSlot";
                         getTier2ItemCommand.Parameters.AddWithValue("@Class", playerClass);
                         getTier2ItemCommand.Parameters.AddWithValue("@ItemSlot", itemSlot);
-                        SqlDataAdapter tier1ItemDa = new SqlDataAdapter(getTier2ItemCommand);
-                        tier1ItemDa.Fill(tier2ItemDt);
+                        SqlDataAdapter tier2ItemDa = new SqlDataAdapter(getTier2ItemCommand);
+                        tier2ItemDa.Fill(tier2ItemDt);
                         string tier2wowheadLink = tier2ItemDt.Rows[0]["wowheadLink"].ToString();
                         lootT2.Append("<tr><td><a href=" + tier2wowheadLink + "</a></td></tr>");
                     }

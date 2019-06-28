@@ -23,7 +23,7 @@ namespace WebApplication5
             {
                 labelError.Visible = false;
             }
-            // InsertUserIntoDatabase("admin", "password");
+            // InsertUserIntoDatabase("scubacops", "Sappersahoy123!");
             //byte[] randomSalt = GetSalt(saltLengthLimit);
             //string randomSaltAsString = Encoding.ASCII.GetString(randomSalt);
 
@@ -33,7 +33,7 @@ namespace WebApplication5
             //byte[] saltedHash = GenerateSaltedHash(bytePassword, randomSalt);
             //string saltedHashAsString = Encoding.ASCII.GetString(saltedHash);
 
-            //bool testLogin = AuthenticateUser("Forest", "incorrectPassword123");
+            //bool testLogin = AuthenticateUser("scubacops", "Sappersahoy123!");
 
             int x = 5;
         }

@@ -13,7 +13,7 @@ namespace WebApplication5
 {
     public class Utility
     {
-        public static void InsertPlayerlootQuery(string playerName, string itemName, string spec, string dateOfRaid)
+        public static void InsertPlayerlootQuery(string playerName, string itemName, string spec, string dateOfRaid, bool isSidegrade)
         {
             if (playerName == null || playerName.Equals(string.Empty) || itemName == null || itemName.Equals(string.Empty))
             {
@@ -31,27 +31,50 @@ namespace WebApplication5
             SqlCommand commandGetItemValue = new SqlCommand(itemValueQuery, connection);
             SqlDataReader reader = commandGetItemValue.ExecuteReader();
             double itemValue = 0;
+            double itemValueSidegrade = 0;
             if (reader.Read())
             {
                 itemValue = Convert.ToDouble(reader["ItemValue"]);
                 reader.Close();
             }
 
+            itemValueSidegrade = itemValue * 0.25;
             if (!spec.Equals("Offspec"))
             {
                 if (spec.Equals("Mainspec"))
                 {
                     /* Update Mainspec Player LootScore */
-                    string updatePlayerLootScore = "UPDATE Roster SET LootScore = LootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
-                    SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
-                    commandUpdatePlayerLootScore.ExecuteNonQuery();
+                    if (isSidegrade)
+                    {
+                        string updatePlayerLootScore = "UPDATE Roster SET LootScore = LootScore + " + itemValueSidegrade + " WHERE PlayerName = '" + playerName + "'";
+                        SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
+                        commandUpdatePlayerLootScore.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        string updatePlayerLootScore = "UPDATE Roster SET LootScore = LootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
+                        SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
+                        commandUpdatePlayerLootScore.ExecuteNonQuery();
+                    }
+                    
+
                 }
                 else
                 {
                     /* Update Pvp/Offspec Player LootScore */
-                    string updatePlayerLootScore = "UPDATE Roster SET PvpLootScore = PvpLootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
-                    SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
-                    commandUpdatePlayerLootScore.ExecuteNonQuery();
+                    if (isSidegrade)
+                    {
+                        string updatePlayerLootScore = "UPDATE Roster SET PvpLootScore = PvpLootScore + " + itemValueSidegrade + " WHERE PlayerName = '" + playerName + "'";
+                        SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
+                        commandUpdatePlayerLootScore.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        string updatePlayerLootScore = "UPDATE Roster SET PvpLootScore = PvpLootScore + " + itemValue + " WHERE PlayerName = '" + playerName + "'";
+                        SqlCommand commandUpdatePlayerLootScore = new SqlCommand(updatePlayerLootScore, connection);
+                        commandUpdatePlayerLootScore.ExecuteNonQuery();
+                    }
+
                 }
             }
 
@@ -73,7 +96,7 @@ namespace WebApplication5
 
             command.Parameters.AddWithValue("@PlayerName", playerName);
             command.Parameters.AddWithValue("@ItemName", itemName);
-            command.Parameters.AddWithValue("@ItemValue", itemValue);
+            command.Parameters.AddWithValue("@ItemValue", isSidegrade ? itemValueSidegrade : itemValue);
             command.Parameters.AddWithValue("@Spec", spec);
             command.Parameters.AddWithValue("@RaidName", raidName);
             command.Parameters.AddWithValue("@DateOfRaid", dateOfRaid);

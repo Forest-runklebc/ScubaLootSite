@@ -20,6 +20,13 @@ namespace WebApplication5
             {
                 Response.Redirect("Default.aspx");
             }
+
+            TextBox textBox = comboUpdatePlayer1.FindControl("TextBox") as TextBox;
+
+            if (textBox != null)
+            {
+                textBox.Attributes.Add("onBlur", "comboUpdatePlayer1_OnBlur(this);");
+            }
         }
 
         protected void buttonAddNewPlayers_Click(object sender, EventArgs e)
@@ -119,8 +126,8 @@ namespace WebApplication5
             // Make sure we don't overwrite values that are the same in the DB and screen
             rank = existingRank.Equals(rank) ? existingRank : rank;
             className = existingClass.Equals(className) ?  existingClass : className;
-            subClass = existingSubClass.Equals(subClass) ? subClass : existingSubClass;
-            if (!className.Equals("Warrior") || !className.Equals("Priest"))
+            subClass = existingSubClass.Equals(subClass) || existingSubClass.Equals("") ? subClass : existingSubClass;
+            if (!(className.Equals("Warrior") || className.Equals("Priest")))
             {
                 subClass = string.Empty;
             }
@@ -137,6 +144,108 @@ namespace WebApplication5
             commandUpdateExistingPlayer.ExecuteNonQuery();
 
             connection.Close();
+        }
+
+        protected void comboUpdatePlayer1_TextChanged(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string getExistingPlayerInfo = "SELECT PlayerRank, PlayerClass, SubClass, IsActive from Roster where PlayerName = @PlayerName";
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand commandGetExistingPlayerInfo = connection.CreateCommand();
+            commandGetExistingPlayerInfo.CommandText = getExistingPlayerInfo;
+            commandGetExistingPlayerInfo.Parameters.AddWithValue("PlayerName", comboUpdatePlayer1.Text);
+            da.SelectCommand = commandGetExistingPlayerInfo;
+            DataTable dt = new DataTable();
+            connection.Open();
+            da.Fill(dt);
+
+            string existingRank = string.Empty;
+            string existingClass = string.Empty;
+            string existingSubClass = string.Empty;
+            string existingIsActive = string.Empty;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                existingRank = row["PlayerRank"].ToString();
+                existingClass = row["PlayerClass"].ToString();
+                existingSubClass = row["SubClass"].ToString();
+                existingIsActive = row["IsActive"].ToString();
+            }
+
+            if (!existingRank.Equals("")) comboUpdateRanks1.Text = existingRank;
+            if (!existingClass.Equals("")) comboUpdateClass1.Text = existingClass;
+            if (!existingSubClass.Equals("")) comboUpdateSubClass1.Text = existingSubClass;
+            radioUpdateActive1.SelectedIndex = existingIsActive.Equals("True") ? 0 : 1;
+        }
+
+        protected void comboUpdatePlayer2_TextChanged(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string getExistingPlayerInfo = "SELECT PlayerRank, PlayerClass, SubClass, IsActive from Roster where PlayerName = @PlayerName";
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand commandGetExistingPlayerInfo = connection.CreateCommand();
+            commandGetExistingPlayerInfo.CommandText = getExistingPlayerInfo;
+            commandGetExistingPlayerInfo.Parameters.AddWithValue("PlayerName", comboUpdatePlayer2.Text);
+            da.SelectCommand = commandGetExistingPlayerInfo;
+            DataTable dt = new DataTable();
+            connection.Open();
+            da.Fill(dt);
+
+            string existingRank = string.Empty;
+            string existingClass = string.Empty;
+            string existingSubClass = string.Empty;
+            string existingIsActive = string.Empty;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                existingRank = row["PlayerRank"].ToString();
+                existingClass = row["PlayerClass"].ToString();
+                existingSubClass = row["SubClass"].ToString();
+                existingIsActive = row["IsActive"].ToString();
+            }
+
+            if (!existingRank.Equals("")) comboUpdateRanks2.Text = existingRank;
+            if (!existingClass.Equals("")) comboUpdateClass2.Text = existingClass;
+            if (!existingSubClass.Equals("")) comboUpdateSubClass2.Text = existingSubClass;
+            radioUpdateActive2.SelectedIndex = existingIsActive.Equals("True") ? 0 : 1;
+        }
+
+        protected void comboUpdatePlayer3_TextChanged(object sender, EventArgs e)
+        {
+            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+
+            string getExistingPlayerInfo = "SELECT PlayerRank, PlayerClass, SubClass, IsActive from Roster where PlayerName = @PlayerName";
+            SqlDataAdapter da = new SqlDataAdapter();
+            SqlCommand commandGetExistingPlayerInfo = connection.CreateCommand();
+            commandGetExistingPlayerInfo.CommandText = getExistingPlayerInfo;
+            commandGetExistingPlayerInfo.Parameters.AddWithValue("PlayerName", comboUpdatePlayer3.Text);
+            da.SelectCommand = commandGetExistingPlayerInfo;
+            DataTable dt = new DataTable();
+            connection.Open();
+            da.Fill(dt);
+
+            string existingRank = string.Empty;
+            string existingClass = string.Empty;
+            string existingSubClass = string.Empty;
+            string existingIsActive = string.Empty;
+
+            foreach (DataRow row in dt.Rows)
+            {
+                existingRank = row["PlayerRank"].ToString();
+                existingClass = row["PlayerClass"].ToString();
+                existingSubClass = row["SubClass"].ToString();
+                existingIsActive = row["IsActive"].ToString();
+            }
+
+            if (!existingRank.Equals("")) comboUpdateRanks3.Text = existingRank;
+            if (!existingClass.Equals("")) comboUpdateClass3.Text = existingClass;
+            if (!existingSubClass.Equals("")) comboUpdateSubClass3.Text = existingSubClass;
+            radioUpdateActive3.SelectedIndex = existingIsActive.Equals("True") ? 0 : 1;
         }
     }
 }

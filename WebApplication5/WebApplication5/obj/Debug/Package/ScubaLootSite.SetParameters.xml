@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <setParameter name="IIS Web Application Name" value="Default Web Site/" />
-  <setParameter name="BLAKE-Web.config Connection String" value="Data Source=BLAKE-PC;Initial Catalog=scuba;Integrated Security=True" />
+  <setParameter name="BLAKE-Web.config Connection String" value="Data Source=aa1wr03lvyw0z9n.cwfckr81pscl.us-east-2.rds.amazonaws.com,1433;Initial Catalog=scuba;Integrated Security=False;User ID=scubacopsdb;Password=scubacops123!" />
 </parameters>
