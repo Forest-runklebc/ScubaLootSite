@@ -119,6 +119,42 @@ namespace WebApplication5
             #endregion
         }
 
+        protected void clearAllFields_Click(object sender, EventArgs e)
+        {
+            comboPlayer1.SelectedIndex = -1;
+            comboPlayer2.SelectedIndex = -1;
+            comboPlayer3.SelectedIndex = -1;
+            comboPlayer4.SelectedIndex = -1;
+            comboPlayer5.SelectedIndex = -1;
+            comboPlayer6.SelectedIndex = -1;
+            comboPlayer7.SelectedIndex = -1;
+            comboPlayer8.SelectedIndex = -1;
+            comboPlayer9.SelectedIndex = -1;
+            comboPlayer10.SelectedIndex = -1;
+
+            comboAttendanceValue1.SelectedIndex = -1;
+            comboAttendanceValue2.SelectedIndex = -1;
+            comboAttendanceValue3.SelectedIndex = -1;
+            comboAttendanceValue4.SelectedIndex = -1;
+            comboAttendanceValue5.SelectedIndex = -1;
+            comboAttendanceValue6.SelectedIndex = -1;
+            comboAttendanceValue7.SelectedIndex = -1;
+            comboAttendanceValue8.SelectedIndex = -1;
+            comboAttendanceValue9.SelectedIndex = -1;
+            comboAttendanceValue10.SelectedIndex = -1;
+
+            radioAttendanceStatus1.SelectedIndex = 0;
+            radioAttendanceStatus2.SelectedIndex = 0;
+            radioAttendanceStatus3.SelectedIndex = 0;
+            radioAttendanceStatus4.SelectedIndex = 0;
+            radioAttendanceStatus5.SelectedIndex = 0;
+            radioAttendanceStatus6.SelectedIndex = 0;
+            radioAttendanceStatus7.SelectedIndex = 0;
+            radioAttendanceStatus8.SelectedIndex = 0;
+            radioAttendanceStatus9.SelectedIndex = 0;
+            radioAttendanceStatus10.SelectedIndex = 0;
+        }
+
         public DataSet getEntireActiveRoster()
         {
             string getRosterQuery = "SELECT PlayerName FROM Roster WHERE PlayerName <> 'DE' AND IsActive = 1"; // Ignore Disenchanter player option
@@ -258,74 +294,7 @@ namespace WebApplication5
 
             command.ExecuteNonQuery();
             connection.Close();          
-        }
-
-        public void UpdateExistingRaidQuery(string playerName, string attendanceValue, string attendanceStatus)
-        {
-            if (playerName == null || playerName.Equals(string.Empty) || attendanceValue == null || attendanceValue.Equals(string.Empty))
-            {
-                return;
-            }
-
-            if (attendanceEntryAlreadyExists(playerName, calendarAttendance.SelectedDate))
-            {
-                string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
-                SqlConnection connection = new SqlConnection(connectionString);
-                SqlCommand command = connection.CreateCommand();
-
-                string getPlayerAttendanceValueForRaidDate = "SELECT AttendanceValue from Attendance WHERE PlayerName = @PlayerName AND RaidDate = @RaidDate";
-                SqlDataAdapter da = new SqlDataAdapter();
-                command.CommandText = getPlayerAttendanceValueForRaidDate;
-                command.Parameters.AddWithValue("PlayerName", playerName);
-                command.Parameters.AddWithValue("RaidDate", calendarAttendance.SelectedDate);
-                da.SelectCommand = command;
-                DataSet ds = new DataSet();
-                connection.Open();
-                da.Fill(ds);
-
-                decimal existingAttendanceValue = Decimal.Parse(ds.Tables[0].Rows[0]["AttendanceValue"].ToString());
-                if (existingAttendanceValue == Decimal.Parse(attendanceValue))
-                {
-                    // do nothing?
-                }
-                else if (existingAttendanceValue < Decimal.Parse(attendanceValue))
-                {
-                    decimal difference = Decimal.Parse(attendanceValue) - existingAttendanceValue;
-                    // Update RaidsAttended column in [Roster] table
-                    string updateRaidsAttendedQuery = "UPDATE Roster SET RaidsAttended = RaidsAttended + @Difference WHERE PlayerName = @PlayerName";
-                    command = new SqlCommand(updateRaidsAttendedQuery, connection);
-
-                    command.Parameters.AddWithValue("@Difference", difference);
-                    command.Parameters.AddWithValue("@PlayerName", playerName);
-
-                    command.ExecuteNonQuery();
-                }
-                else // existingAttendanceValue > Decimal.Parse(attendanceValue)
-                {
-                    decimal difference = existingAttendanceValue - Decimal.Parse(attendanceValue);
-                    // Update RaidsAttended column in [Roster] table
-                    string updateRaidsAttendedQuery = "UPDATE Roster SET RaidsAttended = RaidsAttended - @Difference WHERE PlayerName = @PlayerName";
-                    command = new SqlCommand(updateRaidsAttendedQuery, connection);
-
-                    command.Parameters.AddWithValue("@Difference", difference);
-                    command.Parameters.AddWithValue("@PlayerName", playerName);
-
-                    command.ExecuteNonQuery();
-                }
-
-                string updatePlayerAttendanceQuery = "UPDATE Attendance SET AttendanceValue = @AttendanceValue, Bench = @Bench WHERE PlayerName = @PlayerName AND RaidDate = @RaidDate";
-                command = new SqlCommand(updatePlayerAttendanceQuery, connection);
-                //connection.Open();
-
-                command.Parameters.AddWithValue("@AttendanceValue", attendanceValue);
-                command.Parameters.AddWithValue("@Bench", attendanceStatus);
-                command.Parameters.AddWithValue("@PlayerName", playerName);
-                command.Parameters.AddWithValue("@RaidDate", calendarAttendance.SelectedDate);
-
-                command.ExecuteNonQuery();
-                connection.Close();
-            }
-        }
+        }       
 
         protected void CheckBoxRaids_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -340,16 +309,70 @@ namespace WebApplication5
         {
             labelErrorRaidAlreadyExists.Visible = false;
 
-            UpdateExistingRaidQuery(comboPlayer1.SelectedValue, comboAttendanceValue1.SelectedValue, radioAttendanceStatus1.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer2.SelectedValue, comboAttendanceValue2.SelectedValue, radioAttendanceStatus2.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer3.SelectedValue, comboAttendanceValue3.SelectedValue, radioAttendanceStatus3.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer4.SelectedValue, comboAttendanceValue4.SelectedValue, radioAttendanceStatus4.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer5.SelectedValue, comboAttendanceValue5.SelectedValue, radioAttendanceStatus5.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer6.SelectedValue, comboAttendanceValue6.SelectedValue, radioAttendanceStatus6.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer7.SelectedValue, comboAttendanceValue7.SelectedValue, radioAttendanceStatus7.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer8.SelectedValue, comboAttendanceValue8.SelectedValue, radioAttendanceStatus8.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer9.SelectedValue, comboAttendanceValue9.SelectedValue, radioAttendanceStatus9.SelectedValue);
-            UpdateExistingRaidQuery(comboPlayer10.SelectedValue, comboAttendanceValue10.SelectedValue, radioAttendanceStatus10.SelectedValue);
+            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+            SqlConnection connection = new SqlConnection(connectionString);
+            SqlCommand command = connection.CreateCommand();
+
+            string checkIfRaidDateExistsQuery = "SELECT distinct RaidDate from Attendance WHERE RaidDate = @RaidDate";
+            SqlDataAdapter da = new SqlDataAdapter();
+            command.CommandText = checkIfRaidDateExistsQuery;            
+            command.Parameters.AddWithValue("RaidDate", calendarAttendance.SelectedDate);
+            da.SelectCommand = command;
+            DataSet ds = new DataSet();
+            connection.Open();
+            da.Fill(ds);
+
+            if (ds.Tables[0].Rows.Count == 0)
+            {
+                // did not find an existing raid  
+                return;
+            }
+
+            string deleteExistingRaidsQuery = "DELETE from Attendance WHERE RaidDate = @RaidDate";
+            command = new SqlCommand(deleteExistingRaidsQuery, connection);
+
+            command.Parameters.AddWithValue("@RaidDate", calendarAttendance.SelectedDate);
+            command.ExecuteNonQuery();
+
+
+            InsertPlayerAttendanceQuery(comboPlayer1.SelectedValue, comboAttendanceValue1.SelectedValue, radioAttendanceStatus1.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer2.SelectedValue, comboAttendanceValue2.SelectedValue, radioAttendanceStatus2.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer3.SelectedValue, comboAttendanceValue3.SelectedValue, radioAttendanceStatus3.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer4.SelectedValue, comboAttendanceValue4.SelectedValue, radioAttendanceStatus4.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer5.SelectedValue, comboAttendanceValue5.SelectedValue, radioAttendanceStatus5.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer6.SelectedValue, comboAttendanceValue6.SelectedValue, radioAttendanceStatus6.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer7.SelectedValue, comboAttendanceValue7.SelectedValue, radioAttendanceStatus7.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer8.SelectedValue, comboAttendanceValue8.SelectedValue, radioAttendanceStatus8.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer9.SelectedValue, comboAttendanceValue9.SelectedValue, radioAttendanceStatus9.SelectedValue);
+            InsertPlayerAttendanceQuery(comboPlayer10.SelectedValue, comboAttendanceValue10.SelectedValue, radioAttendanceStatus10.SelectedValue);
+
+            List<string> benchedPlayers = getBenchedPlayers();
+            DataSet entireRaidRoster = getEntireActiveRoster();
+            List<DataRow> rowsToDelete = new List<DataRow>();
+            foreach (DataRow row in entireRaidRoster.Tables[0].Rows)
+            {
+                if (benchedPlayers.Contains(row["PlayerName"]))
+                {
+                    rowsToDelete.Add(row);
+                }
+            }
+
+            foreach (DataRow row in rowsToDelete)
+            {
+                entireRaidRoster.Tables[0].Rows.Remove(row);
+            }
+
+            List<string> remainingRosterToSubmit = new List<string>();
+
+            foreach (DataRow row in entireRaidRoster.Tables[0].Rows)
+            {
+                remainingRosterToSubmit.Add(row["PlayerName"].ToString());
+            }
+
+            foreach (string playerName in remainingRosterToSubmit)
+            {
+                InsertPlayerAttendanceQuery(playerName, "1.00", "");
+            }
 
             #region Reset Textboxes
             CheckBoxRaids.SelectedIndex = -1;

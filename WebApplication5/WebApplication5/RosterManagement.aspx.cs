@@ -34,6 +34,49 @@ namespace WebApplication5
             insertNewPlayerToRoster(comboNewPlayer1.SelectedValue, comboNewPlayerRank1.SelectedValue, comboNewPlayerClass1.SelectedValue, comboNewPlayerSubClass1.SelectedValue, radioNewActive1.SelectedValue);
             insertNewPlayerToRoster(comboNewPlayer2.SelectedValue, comboNewPlayerRank2.SelectedValue, comboNewPlayerClass2.SelectedValue, comboNewPlayerSubClass2.SelectedValue, radioNewActive2.SelectedValue);
             insertNewPlayerToRoster(comboNewPlayer3.SelectedValue, comboNewPlayerRank3.SelectedValue, comboNewPlayerClass3.SelectedValue, comboNewPlayerSubClass3.SelectedValue, radioNewActive3.SelectedValue);
+
+            #region reset boxes
+            comboNewPlayer1.SelectedIndex = -1;
+            comboNewPlayer2.SelectedIndex = -1;
+            comboNewPlayer3.SelectedIndex = -1;
+
+            comboNewPlayerRank1.SelectedIndex = -1;
+            comboNewPlayerRank2.SelectedIndex = -1;
+            comboNewPlayerRank3.SelectedIndex = -1;
+
+            comboNewPlayerClass1.SelectedIndex = -1;
+            comboNewPlayerClass2.SelectedIndex = -1;
+            comboNewPlayerClass3.SelectedIndex = -1;
+
+            comboNewPlayerSubClass1.SelectedIndex = -1;
+            comboNewPlayerSubClass2.SelectedIndex = -1;
+            comboNewPlayerSubClass3.SelectedIndex = -1;
+
+            radioNewActive1.SelectedIndex = 0;
+            radioNewActive2.SelectedIndex = 0;
+            radioNewActive3.SelectedIndex = 0;
+
+            comboUpdatePlayer1.SelectedIndex = -1;
+            comboUpdatePlayer2.SelectedIndex = -1;
+            comboUpdatePlayer3.SelectedIndex = -1;
+
+            comboUpdateRanks1.SelectedIndex = -1;
+            comboUpdateRanks2.SelectedIndex = -1;
+            comboUpdateRanks3.SelectedIndex = -1;
+
+            comboUpdateClass1.SelectedIndex = -1;
+            comboUpdateClass2.SelectedIndex = -1;
+            comboUpdateClass3.SelectedIndex = -1;
+
+            comboUpdateSubClass1.SelectedIndex = -1;
+            comboUpdateSubClass2.SelectedIndex = -1;
+            comboUpdateSubClass3.SelectedIndex = -1;
+
+            radioUpdateActive1.SelectedIndex = 0;
+            radioUpdateActive2.SelectedIndex = 0;
+            radioUpdateActive3.SelectedIndex = 0;
+            #endregion
+
         }
 
         public void insertNewPlayerToRoster(string player, string rank, string className, string subClass, string isActive)
@@ -93,6 +136,49 @@ namespace WebApplication5
             updateExistingPlayer(comboUpdatePlayer1.SelectedValue, comboUpdateRanks1.SelectedValue, comboUpdateClass1.SelectedValue, comboUpdateSubClass1.SelectedValue, radioUpdateActive1.SelectedValue);
             updateExistingPlayer(comboUpdatePlayer2.SelectedValue, comboUpdateRanks2.SelectedValue, comboUpdateClass2.SelectedValue, comboUpdateSubClass2.SelectedValue, radioUpdateActive2.SelectedValue);
             updateExistingPlayer(comboUpdatePlayer3.SelectedValue, comboUpdateRanks3.SelectedValue, comboUpdateClass3.SelectedValue, comboUpdateSubClass3.SelectedValue, radioUpdateActive3.SelectedValue);
+            #region reset boxes
+            comboNewPlayer1.SelectedIndex = -1;
+            comboNewPlayer2.SelectedIndex = -1;
+            comboNewPlayer3.SelectedIndex = -1;
+
+            comboNewPlayerRank1.SelectedIndex = -1;
+            comboNewPlayerRank2.SelectedIndex = -1;
+            comboNewPlayerRank3.SelectedIndex = -1;
+
+            comboNewPlayerClass1.SelectedIndex = -1;
+            comboNewPlayerClass2.SelectedIndex = -1;
+            comboNewPlayerClass3.SelectedIndex = -1;
+
+            comboNewPlayerSubClass1.SelectedIndex = -1;
+            comboNewPlayerSubClass2.SelectedIndex = -1;
+            comboNewPlayerSubClass3.SelectedIndex = -1;
+
+            radioNewActive1.SelectedIndex = 0;
+            radioNewActive2.SelectedIndex = 0;
+            radioNewActive3.SelectedIndex = 0;
+
+            comboUpdatePlayer1.SelectedIndex = -1;
+            comboUpdatePlayer2.SelectedIndex = -1;
+            comboUpdatePlayer3.SelectedIndex = -1;
+
+            comboUpdateRanks1.SelectedIndex = -1;
+            comboUpdateRanks2.SelectedIndex = -1;
+            comboUpdateRanks3.SelectedIndex = -1;
+
+            comboUpdateClass1.SelectedIndex = -1;
+            comboUpdateClass2.SelectedIndex = -1;
+            comboUpdateClass3.SelectedIndex = -1;
+
+            comboUpdateSubClass1.SelectedIndex = -1;
+            comboUpdateSubClass2.SelectedIndex = -1;
+            comboUpdateSubClass3.SelectedIndex = -1;
+
+            radioUpdateActive1.SelectedIndex = 0;
+            radioUpdateActive2.SelectedIndex = 0;
+            radioUpdateActive3.SelectedIndex = 0;
+            #endregion
+
+            ClientScript.RegisterStartupScript(this.GetType(), "myalert", "alert('" + "Updates Accepted" + "');", true);
         }
 
         public void updateExistingPlayer(string player, string rank, string className, string subClass, string isActive)

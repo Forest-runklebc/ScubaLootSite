@@ -173,7 +173,7 @@ namespace WebApplication5
 		                                as RecentPercentageAttendance,
                                     (select PvpLootScore from Roster where PlayerName = @PlayerName) as PvpLootScore
                                 FROM 
-	                                (SELECT DISTINCT TOP 5 * FROM Attendance WHERE PlayerName = @PlayerName ORDER BY RaidDate DESC) RecentAttendance 
+	                                (SELECT DISTINCT TOP 8 * FROM Attendance WHERE PlayerName = @PlayerName ORDER BY RaidDate DESC) RecentAttendance 
 											                                inner join Roster on Roster.PlayerName = RecentAttendance.PlayerName
                                 WHERE
                                     Roster.IsActive = 1
