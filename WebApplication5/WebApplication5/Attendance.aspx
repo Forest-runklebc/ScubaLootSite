@@ -153,7 +153,7 @@
 
     <br />
     <asp:Button ID="SubmitNewRaid" runat="server" Text="Submit New Raid" onClientClick="return confirm('Really submit new raid?')" OnClick="SubmitNewRaid_Click" />
-    <asp:Button ID="UpdateExistingRaid" runat="server" Text="Overwrite Existing Raid" onClientClick="return confirm('Really DELETE AND OVERWRITE existing raid?')" OnClick="UpdateExistingRaid_Click" />
+    <asp:Button ID="UpdateExistingRaid" runat="server" Text="Overwrite Existing Raid" onClientClick="return confirm('Really DELETE AND OVERWRITE existing raid?')" OnClick="DeleteAndOverwriteExistingRaid_Click" />
     <asp:Button ID="clearAllFields" runat="server" Text="Clear ALL Fields" onClientClick="return confirm('CLEAR ALL FIELDS?')" OnClick="clearAllFields_Click" />
     <br />
     <asp:Label ID="labelErrorRaidAlreadyExists" runat="server" Text="Error: A raid already exists for this date. Use the update button instead." ForeColor="Red"></asp:Label>

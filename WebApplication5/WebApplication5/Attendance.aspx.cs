@@ -117,6 +117,8 @@ namespace WebApplication5
             comboAttendanceValue10.SelectedIndex = -1;
             radioAttendanceStatus10.SelectedValue = "Missing";
             #endregion
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
 
         protected void clearAllFields_Click(object sender, EventArgs e)
@@ -305,7 +307,7 @@ namespace WebApplication5
             UpdateExistingRaid.ToolTip = "";
         }
 
-        protected void UpdateExistingRaid_Click(object sender, EventArgs e)
+        protected void DeleteAndOverwriteExistingRaid_Click(object sender, EventArgs e)
         {
             labelErrorRaidAlreadyExists.Visible = false;
 
@@ -417,6 +419,8 @@ namespace WebApplication5
             comboAttendanceValue10.SelectedIndex = -1;
             radioAttendanceStatus10.SelectedValue = "Missing";
             #endregion
+
+            Page.Response.Redirect(Page.Request.Url.ToString(), true);
         }
 
         protected void calendarAttendance_SelectionChanged(object sender, EventArgs e)
