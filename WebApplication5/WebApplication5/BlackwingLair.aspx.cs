@@ -23,6 +23,7 @@ namespace WebApplication5
             if (!IsPostBack)
             {
                 calendarBWL.SelectedDate = DateTime.Today;
+                Utility.getRaidsForSelectedDate(calendarBWL, labelRaidsRun);
             }
         }
 
@@ -74,6 +75,11 @@ namespace WebApplication5
             Utility.InsertPlayerlootQuery(comboTrashPlayer9.SelectedValue, comboTrashLoot9.SelectedValue, radioTrash9.SelectedValue, dateOfRaid, checkboxTrashLoot9.Checked);
             Utility.InsertPlayerlootQuery(comboTrashPlayer10.SelectedValue, comboTrashLoot10.SelectedValue, radioTrash10.SelectedValue, dateOfRaid, checkboxTrashLoot10.Checked);
 
+        }
+
+        protected void calendarBWL_SelectionChanged(object sender, EventArgs e)
+        {
+            Utility.getRaidsForSelectedDate(calendarBWL, labelRaidsRun);
         }
     }
 }

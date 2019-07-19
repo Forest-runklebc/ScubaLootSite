@@ -13,6 +13,11 @@
     
      <style type="text/css">
         .inlineBlock { display: inline-block; }
+
+        .bold
+        {
+          font-weight:bold;
+        }
     </style>
     
 <%--            <asp:CheckBoxList ID="CheckBoxList1" runat="server" Width="380px" RepeatDirection="Horizontal">
@@ -37,7 +42,8 @@
             <asp:SqlDataSource ID="MCTrashLoot" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT ItemName FROM Loot WHERE (BossName = 'Trash' AND RaidName = 'MC')"></asp:SqlDataSource>
             <br /><br /><br /><br />
             <asp:Label ID="Label1" runat="server" Text="Label"><b>Select Date of MC Raid</b></asp:Label>
-            <asp:Calendar ID="calendarMC" runat="server"></asp:Calendar>
+            <asp:Calendar ID="calendarMC" runat="server" OnSelectionChanged="calendarMC_SelectionChanged"></asp:Calendar>
+            <br /><asp:Label ID="labelRaidsRun" runat="server" Text="Label" CssClass="bold"></asp:Label>
             
             
             

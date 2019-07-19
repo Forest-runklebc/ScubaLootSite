@@ -11,6 +11,11 @@
 
      <style type="text/css">
         .inlineBlock { display: inline-block; }
+
+        .bold
+        {
+          font-weight:bold;
+        }
     </style>
 
     
@@ -34,7 +39,8 @@
             <asp:SqlDataSource ID="BWLTrashLoot" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT ItemName FROM Loot WHERE (BossName = 'Trash' AND RaidName = 'BWL')"></asp:SqlDataSource>
             <br /><br /><br /><br />
             <asp:Label ID="Label1" runat="server" Text="Label"><b>Select Date of BWL Raid</b></asp:Label>
-            <asp:Calendar ID="calendarBWL" runat="server"></asp:Calendar>
+            <asp:Calendar ID="calendarBWL" runat="server" OnSelectionChanged="calendarBWL_SelectionChanged"></asp:Calendar>
+            <br /><asp:Label ID="labelRaidsRun" runat="server" Text="Label" CssClass="bold"></asp:Label>
 
             <br />
             <h1>Razorgore</h1>

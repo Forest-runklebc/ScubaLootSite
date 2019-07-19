@@ -17,6 +17,12 @@
 
      <style type="text/css">
         .inlineBlock { display: inline-block; }
+
+        
+        .bold
+        {
+          font-weight:bold;
+        }
     </style>
 
     <asp:SqlDataSource ID="Roster" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT PlayerName FROM Roster WHERE IsActive = 1"></asp:SqlDataSource>
@@ -39,7 +45,8 @@
     <br />
 
     <asp:Label ID="Label1" runat="server" Text="Label"><b>Select Date of Naxx Raid</b></asp:Label>
-    <asp:Calendar ID="calendarNaxx" runat="server"></asp:Calendar>
+    <asp:Calendar ID="calendarNaxx" runat="server" OnSelectionChanged="calendarNaxx_SelectionChanged"></asp:Calendar>
+    <br /><asp:Label ID="labelRaidsRun" runat="server" Text="Label" CssClass="bold"></asp:Label>
 
     <a href="SpiderWing"></a>
     <p id="SpiderWing"></>

@@ -24,7 +24,7 @@ namespace WebApplication5
             if (!IsPostBack)
             {
                 calendarAttendance.SelectedDate = DateTime.Today;
-                getRaidsForSelectedDate();
+                Utility.getRaidsForSelectedDate(calendarAttendance, labelRaidsRun);
 
                 SubmitNewRaid.Enabled = false;
                 SubmitNewRaid.ToolTip = "Must choose at least 1 raid";
@@ -425,55 +425,56 @@ namespace WebApplication5
 
         protected void calendarAttendance_SelectionChanged(object sender, EventArgs e)
         {
-            getRaidsForSelectedDate();
+            //getRaidsForSelectedDate();
+            Utility.getRaidsForSelectedDate(calendarAttendance, labelRaidsRun);
         }
 
-        public void getRaidsForSelectedDate()
-        {
-            string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
-            SqlConnection connection = new SqlConnection(connectionString);
+        //public void getRaidsForSelectedDate()
+        //{
+        //    string connectionString = ConfigurationManager.ConnectionStrings["BLAKE"].ConnectionString;
+        //    SqlConnection connection = new SqlConnection(connectionString);
 
-            string selectRaidsRunOnDate = "select distinct RaidDate, WeekdayName, MC, Ony, BWL, AQ40, Naxx from Attendance where RaidDate = @RaidDate";
-            SqlDataAdapter da = new SqlDataAdapter();
-            SqlCommand command = connection.CreateCommand();
-            command.CommandText = selectRaidsRunOnDate;
-            command.Parameters.AddWithValue("RaidDate", calendarAttendance.SelectedDate.ToString());
+        //    string selectRaidsRunOnDate = "select distinct RaidDate, WeekdayName, MC, Ony, BWL, AQ40, Naxx from Attendance where RaidDate = @RaidDate";
+        //    SqlDataAdapter da = new SqlDataAdapter();
+        //    SqlCommand command = connection.CreateCommand();
+        //    command.CommandText = selectRaidsRunOnDate;
+        //    command.Parameters.AddWithValue("RaidDate", calendarAttendance.SelectedDate.ToString());
 
-            da.SelectCommand = command;
-            DataSet ds = new DataSet();
-            connection.Open();
-            da.Fill(ds);
-            connection.Close();
+        //    da.SelectCommand = command;
+        //    DataSet ds = new DataSet();
+        //    connection.Open();
+        //    da.Fill(ds);
+        //    connection.Close();
 
-            if (ds != null && ds.Tables.Count != 0 && ds.Tables[0].Rows.Count != 0)
-            {
-                DateTime raidDate = DateTime.Parse(ds.Tables[0].Rows[0]["RaidDate"].ToString());
-                string stringRaidDate = raidDate.ToString("dddd, dd MMMM yyyy");
-                // string weekday = ds.Tables[0].Rows[0]["WeekdayName"].ToString();
-                string MC = ds.Tables[0].Rows[0]["MC"].ToString();
-                string Ony = ds.Tables[0].Rows[0]["Ony"].ToString();
-                string BWL = ds.Tables[0].Rows[0]["BWL"].ToString();
-                string AQ40 = ds.Tables[0].Rows[0]["AQ40"].ToString();
-                string Naxx = ds.Tables[0].Rows[0]["Naxx"].ToString();
+        //    if (ds != null && ds.Tables.Count != 0 && ds.Tables[0].Rows.Count != 0)
+        //    {
+        //        DateTime raidDate = DateTime.Parse(ds.Tables[0].Rows[0]["RaidDate"].ToString());
+        //        string stringRaidDate = raidDate.ToString("dddd, dd MMMM yyyy");
+        //        // string weekday = ds.Tables[0].Rows[0]["WeekdayName"].ToString();
+        //        string MC = ds.Tables[0].Rows[0]["MC"].ToString();
+        //        string Ony = ds.Tables[0].Rows[0]["Ony"].ToString();
+        //        string BWL = ds.Tables[0].Rows[0]["BWL"].ToString();
+        //        string AQ40 = ds.Tables[0].Rows[0]["AQ40"].ToString();
+        //        string Naxx = ds.Tables[0].Rows[0]["Naxx"].ToString();
 
-                MC = MC.Equals("True") ? "MC" : string.Empty;
-                Ony = Ony.Equals("True") ? "Ony" : string.Empty;
-                BWL = BWL.Equals("True") ? "BWL" : string.Empty;
-                AQ40 = AQ40.Equals("True") ? "AQ40" : string.Empty;
-                Naxx = Naxx.Equals("True") ? "Naxx" : string.Empty;
+        //        MC = MC.Equals("True") ? "MC" : string.Empty;
+        //        Ony = Ony.Equals("True") ? "Ony" : string.Empty;
+        //        BWL = BWL.Equals("True") ? "BWL" : string.Empty;
+        //        AQ40 = AQ40.Equals("True") ? "AQ40" : string.Empty;
+        //        Naxx = Naxx.Equals("True") ? "Naxx" : string.Empty;
 
-                string[] raidArray = new string[] { MC, Ony, BWL, AQ40, Naxx };
-                string completedRaids = string.Join(", ", raidArray.Where(s => !string.IsNullOrEmpty(s)));
-                // completedRaids = completedRaids.Equals(string.Empty) ? " No Raid Recorded" : completedRaids;
+        //        string[] raidArray = new string[] { MC, Ony, BWL, AQ40, Naxx };
+        //        string completedRaids = string.Join(", ", raidArray.Where(s => !string.IsNullOrEmpty(s)));
+        //        // completedRaids = completedRaids.Equals(string.Empty) ? " No Raid Recorded" : completedRaids;
 
-                labelRaidsRun.Text = stringRaidDate + ": " + completedRaids;
-            }
-            else
-            {
-                DateTime raidDate = calendarAttendance.SelectedDate;
-                string stringRaidDate = raidDate.ToString("dddd, dd MMMM yyyy");
-                labelRaidsRun.Text = stringRaidDate + ": No Raid(s) Recorded";
-            }
-        }
+        //        labelRaidsRun.Text = stringRaidDate + ": " + completedRaids;
+        //    }
+        //    else
+        //    {
+        //        DateTime raidDate = calendarAttendance.SelectedDate;
+        //        string stringRaidDate = raidDate.ToString("dddd, dd MMMM yyyy");
+        //        labelRaidsRun.Text = stringRaidDate + ": No Raid(s) Recorded";
+        //    }
+        //}
     }
 }

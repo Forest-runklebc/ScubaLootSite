@@ -23,6 +23,7 @@ namespace WebApplication5
             if (!IsPostBack)
             {
                 calendarMC.SelectedDate = DateTime.Today;
+                Utility.getRaidsForSelectedDate(calendarMC, labelRaidsRun);
             }
         }
 
@@ -82,6 +83,9 @@ namespace WebApplication5
 
         }
 
-        
+        protected void calendarMC_SelectionChanged(object sender, EventArgs e)
+        {
+            Utility.getRaidsForSelectedDate(calendarMC, labelRaidsRun);
+        }
     }
 }

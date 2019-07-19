@@ -23,6 +23,7 @@ namespace WebApplication5
             if (!IsPostBack)
             {
                 calendarNaxx.SelectedDate = DateTime.Today;
+                Utility.getRaidsForSelectedDate(calendarNaxx, labelRaidsRun);
             }
         }
 
@@ -108,6 +109,11 @@ namespace WebApplication5
             Utility.InsertPlayerlootQuery(comboTrashPlayer8.SelectedValue, comboTrashLoot8.SelectedValue, radioTrash8.SelectedValue, dateOfRaid, checkboxTrash8.Checked);
             Utility.InsertPlayerlootQuery(comboTrashPlayer9.SelectedValue, comboTrashLoot9.SelectedValue, radioTrash9.SelectedValue, dateOfRaid, checkboxTrash9.Checked);
             Utility.InsertPlayerlootQuery(comboTrashPlayer10.SelectedValue, comboTrashLoot10.SelectedValue, radioTrash10.SelectedValue, dateOfRaid, checkboxTrash10.Checked);
+        }
+
+        protected void calendarNaxx_SelectionChanged(object sender, EventArgs e)
+        {
+            Utility.getRaidsForSelectedDate(calendarNaxx, labelRaidsRun);
         }
     }
 }

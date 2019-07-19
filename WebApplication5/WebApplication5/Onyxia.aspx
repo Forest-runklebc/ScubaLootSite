@@ -14,6 +14,12 @@
     
      <style type="text/css">
         .inlineBlock { display: inline-block; }
+
+        
+        .bold
+        {
+          font-weight:bold;
+        }
     </style>
 
     <asp:SqlDataSource ID="Roster" runat="server" ConnectionString="<%$ ConnectionStrings:BLAKE %>" SelectCommand="SELECT PlayerName FROM Roster WHERE IsActive = 1"></asp:SqlDataSource>
@@ -21,7 +27,8 @@
 
     <br /><br /><br /><br />
     <asp:Label ID="Label1" runat="server" Text="Label"><b>Select Date of Onyxia Raid</b></asp:Label>
-    <asp:Calendar ID="calendarOnyxia" runat="server"></asp:Calendar><br />
+    <asp:Calendar ID="calendarOnyxia" runat="server" OnSelectionChanged="calendarOnyxia_SelectionChanged"></asp:Calendar><br />
+    <br /><asp:Label ID="labelRaidsRun" runat="server" Text="Label" CssClass="bold"></asp:Label><br /><br />
 
     <a href="https://classic.wowhead.com/item=17966/onyxia-hide-backpack"></a><br />
     <asp:Label ID="labelHasOnyBag" runat="server"></asp:Label>

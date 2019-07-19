@@ -24,6 +24,7 @@ namespace WebApplication5
             {
                 calendarOnyxia.SelectedDate = DateTime.Today;
                 getPlayersWithOnyBag();
+                Utility.getRaidsForSelectedDate(calendarOnyxia, labelRaidsRun);
             }
         }
 
@@ -68,6 +69,11 @@ namespace WebApplication5
             Utility.InsertPlayerlootQuery(comboOnyxiaPlayer4.SelectedValue, comboOnyxiaLoot4.SelectedValue, radioOnyxia4.SelectedValue, dateOfRaid, checkboxOnyxia4.Checked);
             Utility.InsertPlayerlootQuery(comboOnyxiaPlayer5.SelectedValue, comboOnyxiaLoot5.SelectedValue, radioOnyxia5.SelectedValue, dateOfRaid, checkboxOnyxia5.Checked);
             Utility.InsertPlayerlootQuery(comboOnyxiaPlayer6.SelectedValue, comboOnyxiaLoot6.SelectedValue, radioOnyxia6.SelectedValue, dateOfRaid, checkboxOnyxia6.Checked);
+        }
+
+        protected void calendarOnyxia_SelectionChanged(object sender, EventArgs e)
+        {
+            Utility.getRaidsForSelectedDate(calendarOnyxia, labelRaidsRun);
         }
     }
 }
